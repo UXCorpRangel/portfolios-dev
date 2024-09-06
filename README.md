@@ -28,7 +28,11 @@ Una colección única de plantillas de portafolios para desarrolladores. Obtén 
 
 [![Unicorn Sparkle](./assets/unicorn-sparkle.png)](./unicorn-sparkle)
 
-#### 🤔 ¿Cómo usar?
+#### Diseño
+
+[![Diseño de Unicorn Sparkle](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/RPSa9nHARMmnTemhrGuTCZ/Portafolio-dev?node-id=44-1034&t=dIZVva7mcSSduV6j-1)
+
+#### ¿Cómo usar?
 
 Para utilizar la plantilla [Unicorn Sparkle](./unicorn-sparkle) puedes copiar y ejecutar el siguiente comando en tu terminal:
 
