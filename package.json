@@ -1,0 +1,64 @@
+{
+  "name": "portfolios-dev",
+  "private": true,
+  "description": "Una colección única de plantillas de portafolios para desarrolladores.",
+  "keywords": [
+    "portfolio",
+    "astro",
+    "porfolio-template",
+    "astrojs",
+    "astro-template"
+  ],
+  "bugs": {
+    "url": "https://github.com/UXCorpRangel/portfolios-dev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UXCorpRangel/portfolios-dev.git"
+  },
+  "license": "MIT",
+  "author": "UXCorpRangel - Felix Icaza <fx.joliett17@gmail.com>",
+  "scripts": {
+    "build:us": "pnpm -C unicorn-sparkle build",
+    "dev:us": "pnpm -C unicorn-sparkle dev",
+    "preview:us": "pnpm -C unicorn-sparkle preview",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "./**/*.{js,mjs,cjs}": [
+      "eslint --cache --fix --ext .js,.mjs,.cjs ./",
+      "prettier --cache --write \"./**/*.{js,mjs,cjs}\""
+    ],
+    "./**/*.ts": [
+      "eslint --cache --fix --ext .ts ./",
+      "prettier --cache --write \"./**/*.ts\""
+    ],
+    "./**/*.astro": [
+      "eslint --cache --fix --ext .astro ./",
+      "prettier --cache --write \"./**/*.astro\""
+    ],
+    "./**/*.css": "prettier --cache --write \"./**/*.css\"",
+    "./**/*.json": "prettier --cache --write \"./**/*.json\"",
+    "./**/*.yml": "prettier --cache --write \"./**/*.yml\""
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.3.1",
+    "@typescript-eslint/eslint-plugin": "7.0.1",
+    "@typescript-eslint/parser": "7.0.0",
+    "astro-eslint-parser": "1.0.2",
+    "eslint": "8.57.0",
+    "eslint-config-love": "47.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-astro": "1.2.3",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.10.0",
+    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-promise": "6.1.1",
+    "husky": "9.1.5",
+    "lint-staged": "15.2.10",
+    "prettier": "3.3.3",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.6.6"
+  }
+}
