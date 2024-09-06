@@ -1,0 +1,85 @@
+{
+  "name": "unicorn-sparkle",
+  "private": true,
+  "description": "Unicorn Sparkle es la plantilla de portafolio definitiva para desarrolladores que quieren brillar.",
+  "keywords": [
+    "portfolio",
+    "astro",
+    "porfolio-template",
+    "astrojs",
+    "astro-template"
+  ],
+  "bugs": {
+    "url": "https://github.com/UXCorpRangel/portfolios-dev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UXCorpRangel/portfolios-dev.git"
+  },
+  "license": "MIT",
+  "author": "UXCorpRangel - Felix Icaza <fx.joliett17@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "astro": "astro",
+    "build": "astro check && astro build",
+    "dev": "astro dev",
+    "prepare": "husky",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "lint-staged": {
+    "./**/*.{js,mjs,cjs}": [
+      "eslint --cache --fix --ext .js,.mjs,.cjs ./",
+      "prettier --cache --write \"./**/*.{js,mjs,cjs}\""
+    ],
+    "./**/*.ts": [
+      "eslint --cache --fix --ext .ts ./",
+      "prettier --cache --write \"./**/*.ts\""
+    ],
+    "./src/**/*.astro": [
+      "eslint --cache --fix --ext .astro ./src/",
+      "prettier --cache --write \"./src/**/*.astro\""
+    ],
+    "./src/**/*.css": "prettier --cache --write \"./src/**/*.css\"",
+    "./**/*.json": "prettier --cache --write \"./**/*.json\"",
+    "./**/*.yml": "prettier --cache --write \"./**/*.yml\""
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.3",
+    "@astrolicious/i18n": "0.5.1",
+    "@fontsource-variable/inter": "5.0.20",
+    "@playform/compress": "0.1.1",
+    "@playform/inline": "0.1.0",
+    "astro": "4.15.3",
+    "astro-compressor": "0.4.1",
+    "astro-icon": "1.1.1",
+    "astro-imagetools": "0.9.0",
+    "astro-seo-schema": "4.0.2",
+    "astro-sitemap": "1.0.0",
+    "astro-tunnel": "0.1.6",
+    "i18next": "23.14.0",
+    "sanitize.css": "13.0.0",
+    "schema-dts": "1.1.2",
+    "typescript": "5.5.4"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.3.1",
+    "@typescript-eslint/eslint-plugin": "7.0.1",
+    "@typescript-eslint/parser": "7.0.0",
+    "astro-eslint-parser": "1.0.2",
+    "eslint": "8.57.0",
+    "eslint-config-love": "47.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-astro": "1.2.3",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.10.0",
+    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-promise": "6.1.1",
+    "husky": "9.1.5",
+    "lint-staged": "15.2.10",
+    "prettier": "3.3.3",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.6.6"
+  }
+}

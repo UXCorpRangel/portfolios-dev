@@ -1,0 +1,188 @@
+---
+import I18NHead from '@astrolicious/i18n/components/I18nHead.astro'
+import inter from '@fontsource-variable/inter/files/inter-latin-standard-normal.woff2'
+import { Schema } from 'astro-seo-schema'
+import { getHtmlAttrs } from 'i18n:astro'
+import 'sanitize.css'
+import 'sanitize.css/assets.css'
+import 'sanitize.css/typography.css'
+
+interface Options {
+  title: string
+  description: string
+  metaRobots?: string
+}
+
+interface Props {
+  options: Options
+}
+
+const { options } = Astro.props
+const { title, description, metaRobots } = options
+---
+
+<!doctype html>
+<html {...getHtmlAttrs()}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+
+    <slot name="preconnect" />
+
+    <slot name="async-script" />
+
+    <slot name="critical-css" />
+
+    <style is:inline>
+      :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          rgb(var(--accent-light)) 30%,
+          white 60%
+        );
+        --scrollbar: #e5e5e5;
+        --scrollbar-thumb: #c0c0c0;
+        --scrollbar-thumb-hover: #909090;
+        --scrollbar-dark: #898989;
+        --scrollbar-thumb-dark: #5d5d5d;
+        --scrollbar-thumb-hover-dark: #3f3f3f;
+      }
+
+      html {
+        font-family: system-ui, sans-serif;
+        background: #13151a;
+        background-size: 224px;
+      }
+
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+
+      @view-transition {
+        navigation: auto;
+      }
+
+      body::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        background: var(--scrollbar);
+        transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: background;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb);
+        border-radius: 0.25rem;
+      }
+
+      @media (any-hover: hover) {
+        body::-webkit-scrollbar-thumb:hover {
+          background: var(--scrollbar-thumb-hover);
+        }
+      }
+
+      html.dark body::-webkit-scrollbar {
+        background: var(--scrollbar-dark);
+        transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: background;
+      }
+
+      html.dark body::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-dark);
+      }
+
+      @media (any-hover: hover) {
+        html.dark body::-webkit-scrollbar-thumb:hover {
+          background: var(--scrollbar-thumb-hover-dark);
+        }
+      }
+
+      @supports not selector(::-webkit-scrollbar) {
+        html,
+        body {
+          scrollbar-color: var(--scrollbar) var(--scrollbar-thumb);
+          scrollbar-width: thin;
+          scrollbar-gutter: stable;
+        }
+
+        html.dark,
+        html.dark body {
+          scrollbar-color: var(--scrollbar-dark) var(--scrollbar-thumb-dark);
+        }
+      }
+    </style>
+
+    <slot name="stylesheet" />
+
+    <link
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+      href={inter}
+      type="font/woff2"
+    />
+
+    <slot name="preload" />
+
+    <slot name="defer-script" />
+
+    <meta name="robots" content={metaRobots || 'index, follow'} />
+    {description && <meta name="description" content={description} />}
+    {description && <link href={Astro.url.href} rel="canonical" />}
+    <I18NHead />
+    <meta name="author" content="Felix Icaza - https://felixicaza.com" />
+    <meta name="generator" content={Astro.generator} />
+
+    {
+      description && (
+        <Schema
+          item={{
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Felix Icaza',
+            url: 'https://felixicaza.com',
+            image: 'https://felixicaza.com/img/felixicaza.jpg',
+            sameAs: [
+              'https://felixicaza.com',
+              'https://www.upwork.com/freelancers/felixicaza',
+              'https://www.linkedin.com/in/felixicaza',
+              'https://github.com/felixicaza'
+            ],
+            jobTitle: 'Desarrollador Web Frontend',
+            worksFor: {
+              '@type': 'Organization',
+              name: 'Felix Icaza'
+            }
+          }}
+        />
+      )
+    }
+
+    <slot name="schema" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#000" />
+    <slot name="social-media" />
+  </head>
+  <body>
+    <slot />
+
+    <slot name="dynamic-components" />
+  </body>
+</html>
