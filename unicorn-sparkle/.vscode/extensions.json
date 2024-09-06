@@ -4,8 +4,7 @@
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "standard.vscode-standard",
-    "bradlc.vscode-tailwindcss"
+    "standard.vscode-standard"
   ],
   "unwantedRecommendations": []
 }
