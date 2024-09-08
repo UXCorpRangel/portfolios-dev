@@ -24,8 +24,8 @@ export default defineConfig({
     tunnel(),
     astroImageTools,
     i18n({
-      defaultLocale: 'en',
-      locales: ['en', 'es']
+      defaultLocale: 'es',
+      locales: ['es', 'en']
     }),
     playformInline(),
     sitemap({
