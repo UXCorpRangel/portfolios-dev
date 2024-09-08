@@ -1,0 +1,13 @@
+:root {
+  --bg-color: #000;
+  --bg-secondary-color: #1e1e1e;
+  --text-color: #fff;
+  --font: 'Inter Variable', sans-serif;
+  --border-color: #5a5a5a;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font);
+}
