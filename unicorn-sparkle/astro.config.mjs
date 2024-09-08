@@ -34,7 +34,10 @@ export default defineConfig({
       lastmod: new Date(),
       createLinkInHead: false,
       xmlns: {
-        xhtml: true
+        xhtml: true,
+        news: false,
+        video: false,
+        image: false
       },
       i18n: {
         defaultLocale: 'es',
