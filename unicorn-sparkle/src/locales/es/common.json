@@ -1,16 +1,4 @@
 {
   "title": "Bienvenido a Astro",
-  "description": "Descripción de Astro",
-  "index_title": "Bienvenido a",
-  "index_instructions_1": "Para empezar, abre el directorio <code>src/routes</code> en tu proyecto.",
-  "index_instructions_2": "<strong>Desafío de código:</strong> Modifica el mensaje \"Bienvenido a Astro\" de arriba.",
-  "index_card_1_url": "https://docs.astro.build/es/",
-  "index_card_1": "Descubra cómo funciona Astro y explore la documentación oficial de la API.",
-  "index_card_1_title": "Documentación",
-  "index_card_2": "Potencie su proyecto con nuevos marcos de trabajo y bibliotecas.",
-  "index_card_2_title": "Integraciones",
-  "index_card_3": "Explore una galaxia de temas de inicio creados por la comunidad.",
-  "index_card_3_title": "Temas",
-  "index_card_4": "Ven a saludar a nuestra increíble comunidad de Discord. ❤️",
-  "index_card_4_title": "Comunidad"
+  "description": "Descripción de Astro"
 }

@@ -1,16 +1,4 @@
 {
   "title": "Welcome to Astro",
-  "description": "Astro description",
-  "index_title": "Welcome to",
-  "index_instructions_1": "To get started, open the directory <code>src/routes</code> in your project.",
-  "index_instructions_2": "<strong>Code Challenge:</strong> Tweak the \"Welcome to Astro\" message above.",
-  "index_card_1_url": "https://docs.astro.build/",
-  "index_card_1_title": "Documentation",
-  "index_card_1": "Learn how Astro works and explore the official API docs.",
-  "index_card_2_title": "Integrations",
-  "index_card_2": "Supercharge your project with new frameworks and libraries.",
-  "index_card_3": "Explore a galaxy of community-built starter themes.",
-  "index_card_3_title": "Themes",
-  "index_card_4": "Come say hi to our amazing Discord community. ❤️",
-  "index_card_4_title": "Community"
+  "description": "Astro description"
 }

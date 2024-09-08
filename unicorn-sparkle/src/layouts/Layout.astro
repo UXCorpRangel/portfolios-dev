@@ -37,39 +37,12 @@ const { title, description, metaRobots } = options
 
     <style is:inline>
       :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          rgb(var(--accent-light)) 30%,
-          white 60%
-        );
         --scrollbar: #e5e5e5;
         --scrollbar-thumb: #c0c0c0;
         --scrollbar-thumb-hover: #909090;
         --scrollbar-dark: #898989;
         --scrollbar-thumb-dark: #5d5d5d;
         --scrollbar-thumb-hover-dark: #3f3f3f;
-      }
-
-      html {
-        font-family: system-ui, sans-serif;
-        background: #13151a;
-        background-size: 224px;
-      }
-
-      code {
-        font-family:
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
       }
 
       @view-transition {
@@ -162,11 +135,7 @@ const { title, description, metaRobots } = options
               'https://www.linkedin.com/in/felixicaza',
               'https://github.com/felixicaza'
             ],
-            jobTitle: 'Desarrollador Web Frontend',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Felix Icaza'
-            }
+            jobTitle: 'Desarrollador Web Frontend'
           }}
         />
       )
@@ -176,8 +145,8 @@ const { title, description, metaRobots } = options
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content="#000" />
+
     <slot name="social-media" />
   </head>
   <body>
