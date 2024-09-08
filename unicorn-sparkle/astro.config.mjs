@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config'
+import { URL } from './src/data/constants'
 
 import tunnel from 'astro-tunnel'
 import { astroImageTools } from 'astro-imagetools'
@@ -8,11 +9,9 @@ import sitemap from 'astro-sitemap'
 import playformCompress from '@playform/compress'
 import compressor from 'astro-compressor'
 
-const website = 'https://example.com'
-
 // https://astro.build/config
 export default defineConfig({
-  site: website,
+  site: URL,
   server: {
     host: true
   },
@@ -30,7 +29,7 @@ export default defineConfig({
     }),
     playformInline(),
     sitemap({
-      canonicalURL: website,
+      canonicalURL: URL,
       lastmod: new Date(),
       createLinkInHead: false,
       xmlns: {
