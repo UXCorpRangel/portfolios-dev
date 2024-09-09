@@ -1,0 +1,258 @@
+---
+import { Icon } from 'astro-icon/components'
+import { switchLocalePath, t } from 'i18n:astro'
+
+// Obtenemos los enlaces de la navegación de locales
+const links = t('navbar', { returnObjects: true })
+---
+
+<nav>
+  <ul>
+    {
+      links.map(({ label, href }) => (
+        <li>
+          <a href={href}>{label}</a>
+        </li>
+      ))
+    }
+    <li>
+      <a
+        class="language"
+        href={Astro.url.pathname.includes('/en')
+          ? switchLocalePath('es')
+          : switchLocalePath('en')}
+      >
+        <span>
+          <Icon name="language" size={18} />
+        </span>
+        <span>{Astro.url.pathname.includes('/en') ? 'Spanish' : 'Inglés'}</span>
+      </a>
+    </li>
+    <li>
+      <label aria-label="Toggle">
+        <input type="checkbox" id="toggle" />
+        <span class="toggle-thumb">
+          <Icon name="moon" size={16} />
+          <Icon name="sun" size={16} />
+        </span>
+      </label>
+    </li>
+  </ul>
+</nav>
+
+<!-- Este script se ejecuta cuando se carga la página y pueda aplicar el estilo correspondiente a .toggle-thumb -->
+<script is:inline>
+  if (localStorage.getItem('dark-theme') === 'true') {
+    document.querySelector('.toggle-thumb').classList.add('active')
+  } else {
+    document.querySelector('.toggle-thumb').classList.remove('active')
+  }
+</script>
+
+<style>
+  nav {
+    position: sticky;
+    top: 36px;
+    padding-top: 36px;
+
+    & ul {
+      --gap: 35px;
+
+      display: flex;
+      align-items: center;
+      gap: var(--gap);
+      margin: 0 auto;
+      width: fit-content;
+      border: 1px solid var(--border-color);
+      padding: 16px 24px;
+      border-radius: 1000px;
+      transition: var(--transition-border);
+
+      & li {
+        position: relative;
+
+        /* Agrega el separador entre elementos excepto al último hijo */
+        &:not(:last-child)::after {
+          --size: 3px;
+
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: var(--size);
+          height: var(--size);
+          translate: calc(var(--gap) / 2) -50%;
+          background-color: var(--bg-separator);
+          border-radius: 50%;
+          transition: var(--transition-bg);
+        }
+
+        & .language {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          & span:first-child {
+            line-height: 0;
+          }
+        }
+
+        & label {
+          --padding: 4px;
+
+          display: inline-block;
+          position: relative;
+          width: 50px;
+          height: 24px;
+          padding: var(--padding);
+          cursor: pointer;
+
+          & input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+
+          & .toggle-thumb {
+            --toggle-gap: 8px;
+
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--toggle-gap);
+            background-color: var(--bg-toggle-thumb);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: var(--transition-bg);
+
+            &.active::before {
+              /* Calcula el offset para que el .toggle-thumb se ajuste correctamente */
+              --offset: calc(var(--padding) / 2);
+
+              /* --size: 16px + --toggle-gap: 8px + --offset: 2px = 26px */
+              translate: calc(var(--size) + var(--toggle-gap) + var(--offset));
+            }
+
+            /* Crea el elemento de toggle-thumb */
+            &::before {
+              --size: 16px;
+
+              content: '';
+              position: absolute;
+              top: calc(var(--toggle-gap) / 2);
+              left: calc(var(--toggle-gap) / 2);
+              width: var(--size);
+              height: var(--size);
+              border-radius: 50%;
+              background-color: var(--text-color);
+              transition:
+                translate 300ms ease,
+                var(--transition-bg);
+            }
+
+            & svg {
+              /* Ajusta la posición del icono svg del lado izquierdo (luna) */
+              &:nth-child(odd) {
+                translate: calc(var(--toggle-gap) / 2);
+              }
+              /* Ajusta la posición del icono svg del lado derecho (sol) */
+              &:nth-child(even) {
+                translate: calc((var(--toggle-gap) / 2) * -1);
+              }
+            }
+          }
+        }
+      }
+
+      & a {
+        /* Con la función color-mix cambia el color del link aplicandole un 40% del color del fondo */
+        --hover-color: color-mix(
+          in srgb,
+          var(--text-color),
+          var(--bg-color) 40%
+        );
+
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 150ms ease;
+
+        &:active,
+        &:focus {
+          color: var(--hover-color);
+        }
+
+        /* La media query (any-hover: hover) se utiliza para aplicarle un efecto de hover al link */
+        @media (any-hover: hover) {
+          &:hover {
+            color: var(--hover-color);
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('#toggle')
+  const toggleThumb = document.querySelector('.toggle-thumb')
+
+  // Establecemos una variable global
+  let darkModeState = false
+
+  // Detectamos si el usuario tiene habilitado el modo oscuro
+  const getScheme = window.matchMedia('(prefers-color-scheme: dark)')
+
+  function toggleDarkMode(state: boolean) {
+    document.documentElement.classList.toggle('dark', state)
+    toggleThumb?.classList.toggle('active', state)
+
+    // Establecemos el valor de la variable global
+    // con el valor del parámetro state
+    darkModeState = state
+  }
+
+  // Creamos una nueva función para almacenar el valor en localStorage
+  function setSchemeState(state: boolean) {
+    localStorage.setItem('dark-theme', String(state))
+  }
+
+  // toggleDarkMode(getScheme.matches)
+  // Reemplazamos el valor obtenido por la variable getScheme
+  // por el valor que esté guardado en localStorage, para que
+  // al cargar la página verifique el valor almacenado en
+  // localStorage
+  toggleDarkMode(localStorage.getItem('dark-theme') === 'true')
+
+  // Escuchamos los cambios en las configuración del
+  // del sistema operativo para alternar de tema
+  getScheme.addEventListener('change', () => {
+    // Negamos el valor guardado dentro de la función toggleDarkMode
+    // a la variable global darkModeState y se lo asignamos así misma
+    darkModeState = !darkModeState
+
+    // document.documentElement.classList.toggle('dark')
+    // Llamamos a la funciones toggleDarkMode para alternar el tema
+    // y setSchemeState para guardar el valor en localStorage
+    toggleDarkMode(darkModeState)
+    setSchemeState(darkModeState)
+  })
+
+  toggle?.addEventListener('change', () => {
+    darkModeState = !darkModeState
+
+    toggleDarkMode(darkModeState)
+    setSchemeState(darkModeState)
+  })
+
+  window.addEventListener('keydown', (e) => {
+    // Detectamos si las teclas Alt, Shift y D están presionadas
+    if (e.altKey === true && e.shiftKey === true && e.key === 'D') {
+      darkModeState = !darkModeState
+
+      toggleDarkMode(darkModeState)
+      setSchemeState(darkModeState)
+    }
+  })
+</script>

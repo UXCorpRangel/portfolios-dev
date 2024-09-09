@@ -3,6 +3,7 @@ import I18NHead from '@astrolicious/i18n/components/I18nHead.astro'
 import inter from '@fontsource-variable/inter/files/inter-latin-standard-normal.woff2'
 import { Schema } from 'astro-seo-schema'
 import { getHtmlAttrs } from 'i18n:astro'
+import Navbar from '@components/Navbar.astro'
 import 'sanitize.css'
 import 'sanitize.css/assets.css'
 import 'sanitize.css/typography.css'
@@ -23,7 +24,7 @@ const { title, description, metaRobots } = options
 ---
 
 <!doctype html>
-<html {...getHtmlAttrs()}>
+<html class="dark" {...getHtmlAttrs()}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -110,6 +111,14 @@ const { title, description, metaRobots } = options
       type="font/woff2"
     />
 
+    <script is:inline>
+      if (localStorage.getItem('dark-theme') === 'true') {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+
     <slot name="preload" />
 
     <slot name="defer-script" />
@@ -151,6 +160,8 @@ const { title, description, metaRobots } = options
     <slot name="social-media" />
   </head>
   <body>
+    <Navbar />
+
     <slot />
 
     <slot name="dynamic-components" />
