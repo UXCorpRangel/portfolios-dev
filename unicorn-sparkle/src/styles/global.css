@@ -1,13 +1,27 @@
-:root {
+html {
   --bg-color: #000;
   --bg-secondary-color: #1e1e1e;
+  --bg-toggle-thumb: #343434;
+  --bg-separator: #5a5a5a;
   --text-color: #fff;
   --font: 'Inter Variable', sans-serif;
   --border-color: #5a5a5a;
+  --transition-bg: background-color 150ms ease;
+  --transition-text: color 150ms ease;
+  --transition-border: border-color 150ms ease;
+}
+
+html.dark {
+  --bg-color: #fff;
+  --bg-toggle-thumb: #d5d5d5;
+  --bg-separator: #000;
+  --text-color: #000;
+  --border-color: #e6e6e6;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font);
+  transition: var(--transition-bg), var(--transition-text);
 }
