@@ -25,7 +25,8 @@ const links = t('navbar', { returnObjects: true })
         <span>
           <Icon name="language" size={18} />
         </span>
-        <span>{Astro.url.pathname.includes('/en') ? 'Spanish' : 'Inglés'}</span>
+        <span>{Astro.url.pathname.includes('/en') ? 'Español' : 'English'}</span
+        >
       </a>
     </li>
     <li>
@@ -123,7 +124,7 @@ const links = t('navbar', { returnObjects: true })
             align-items: center;
             gap: var(--toggle-gap);
             background-color: var(--bg-toggle-thumb);
-            border-radius: 24px;
+            border-radius: var(--radius);
             overflow: hidden;
             transition: var(--transition-bg);
 
