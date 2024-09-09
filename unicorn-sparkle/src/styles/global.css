@@ -4,8 +4,10 @@ html {
   --bg-toggle-thumb: #343434;
   --bg-separator: #5a5a5a;
   --text-color: #fff;
+  --text-description-color: #a6a6a6;
   --font: 'Inter Variable', sans-serif;
   --border-color: #5a5a5a;
+  --radius: 24px;
   --transition-bg: background-color 150ms ease;
   --transition-text: color 150ms ease;
   --transition-border: border-color 150ms ease;
@@ -13,9 +15,11 @@ html {
 
 html.dark {
   --bg-color: #fff;
+  --bg-secondary-color: color-mix(in srgb, #1e1e1e, #fff 95%);
   --bg-toggle-thumb: #d5d5d5;
   --bg-separator: #000;
   --text-color: #000;
+  --text-description-color: color-mix(in srgb, #a6a6a6, #000 40%);
   --border-color: #e6e6e6;
 }
 
@@ -29,21 +33,29 @@ body {
 h1 {
   font-size: 4rem;
   font-weight: 700;
+  margin: 0;
 }
 
 h2 {
   font-size: 2.5rem;
   font-weight: 600;
+  margin: 0;
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 0;
 }
 
 h4 {
   font-size: 1.25rem;
   font-weight: 600;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .headline-1 {
