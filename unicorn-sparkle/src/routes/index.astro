@@ -1,6 +1,7 @@
 ---
 import { t } from 'i18n:astro'
 import Layout from '@layouts/Layout.astro'
+import Hero from '@pages/_home/Hero.astro'
 
 const options = {
   title: t('common:title'),
@@ -9,5 +10,5 @@ const options = {
 ---
 
 <Layout options={options}>
-  <p>Hello</p>
+  <Hero />
 </Layout>

@@ -18,5 +18,12 @@
       "label": "About me",
       "href": "/en/#about-me"
     }
-  ]
+  ],
+  "hero": {
+    "job_availability": "Available for work!",
+    "title": "Hello I'm Felix Rangel!",
+    "job_title": "<strong>Web Frontend Developer</strong> from Esteli, Nicaragua.",
+    "description": "Specialist in HTML5, CSS5, JavaScript ES6+, Node.js and WordPress.",
+    "cta": "Contact me"
+  }
 }
