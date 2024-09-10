@@ -54,10 +54,13 @@ const links = t('navbar', { returnObjects: true })
   nav {
     position: sticky;
     top: 36px;
+    z-index: 1;
 
     & ul {
       --gap: 35px;
 
+      background-color: color-mix(in srgb, var(--bg-color), transparent 30%);
+      backdrop-filter: blur(12px);
       display: flex;
       align-items: center;
       gap: var(--gap);
