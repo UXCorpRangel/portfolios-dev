@@ -25,5 +25,19 @@
     "job_title": "<strong>Web Frontend Developer</strong> from Esteli, Nicaragua.",
     "description": "Specialist in HTML5, CSS5, JavaScript ES6+, Node.js and WordPress.",
     "cta": "Contact me"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "jobs": {
+      "jobs_title": ["Freelance", "HD Media Nicaragua"],
+      "jobs_description": [
+        {
+          "title": "Web Frontend Developer",
+          "time": "Dec 2021",
+          "description": "I create modern websites with good UI/UX practices. I also manage SEO, security and performance optimizations to increase conversion and visits.",
+          "list": ["Design of websites", "Optimization of websites"]
+        }
+      ]
+    }
   }
 }

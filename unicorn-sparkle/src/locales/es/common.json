@@ -25,5 +25,19 @@
     "job_title": "<strong>Desarrollador Web Frontend</strong> de Estelí, Nicaragua.",
     "description": "Especialista en HTML5, CSS5, JavaScript ES6+, Node.js y WordPress.",
     "cta": "Contactame"
+  },
+  "experience": {
+    "title": "Experiencia laboral",
+    "jobs": {
+      "jobs_title": ["Freelance", "HD Media Nicaragua"],
+      "jobs_description": [
+        {
+          "title": "Desarrollador Web Frontend",
+          "time": "Dic 2021",
+          "description": "Creo sitios web con diseños modernos y aplicando buenas prácticas de UI/UX. También me encargo de rediseñar, optimizar el posicionamiento SEO, aumentar las medidas de seguridad y optimizar el rendimiento de velocidad de sitios web, para aumentar la taza de conversión y las visitas.",
+          "list": ["Diseño de sitios web", "Optimización de sitios web"]
+        }
+      ]
+    }
   }
 }

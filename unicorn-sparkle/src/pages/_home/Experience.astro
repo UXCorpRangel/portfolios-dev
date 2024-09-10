@@ -1,0 +1,153 @@
+---
+import { t } from 'i18n:astro'
+
+const { title, jobs } = t('experience', {
+  returnObjects: true
+})
+
+const { jobs_title: jobsTitle, jobs_description: jobsDescription } = jobs
+---
+
+<section class="experience">
+  <h2>{title}</h2>
+  <section class="jobs">
+    <div class="job-title">
+      {
+        jobsTitle.map((title, index) => (
+          <button
+            class:list={[
+              'headline-3',
+              {
+                active: index === 0
+              }
+            ]}
+          >
+            {title}
+          </button>
+        ))
+      }
+    </div>
+    {
+      jobsDescription.map(({ title, time, description, list }) => (
+        <div class="job-description">
+          <h3>{title}</h3>
+          <div class="job-time">
+            <time class="headline-4" datetime={time}>
+              {time}
+            </time>
+            <span class="badge">Actual</span>
+          </div>
+          <p>{description}</p>
+          <ul>
+            {list.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </section>
+</section>
+
+<style>
+  .experience {
+    padding-bottom: 120px;
+
+    & h2 {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      white-space: nowrap;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: var(--border-color);
+      }
+    }
+  }
+
+  .jobs {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+
+    & .job-title {
+      display: flex;
+      flex-direction: column;
+
+      & button {
+        background: transparent;
+        color: var(--text-description-color);
+        position: relative;
+        border: none;
+        padding: 16px 24px;
+        cursor: pointer;
+        text-align: left;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-left: 2px solid #5a5a5a;
+          transition:
+            var(--transition-bg),
+            border-color 150ms ease;
+        }
+
+        &:hover {
+          color: var(--text-color);
+          transition: var(--transition-text);
+        }
+
+        &.active {
+          color: var(--text-color);
+
+          &::before {
+            border-left: 3px solid var(--text-color);
+            translate: -0.5px;
+          }
+        }
+      }
+    }
+
+    & .job-description {
+      flex: 1;
+
+      & > * + *,
+      & ul li {
+        margin-top: 16px;
+      }
+
+      & .job-time {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & .badge {
+          background-color: var(--bg-secondary-color);
+          border-radius: 1000px;
+          padding: 2px 12px;
+          border: 1px solid var(--text-color);
+          font-size: 0.875rem;
+          transition: var(--transition-bg);
+        }
+      }
+
+      p {
+        text-wrap: pretty;
+      }
+
+      & .headline-4,
+      & p,
+      & ul {
+        color: var(--text-description-color);
+      }
+    }
+  }
+</style>
