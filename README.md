@@ -4,6 +4,9 @@
 
 Una colección única de plantillas de portafolios para desarrolladores. Obtén un portafolio profesional, moderno y personalizable, resalta tus proyectos, tu experiencia y destaca en el mundo tech con diseños que impresionan.
 
+> [!WARNING]
+> Las plantillas aún están bajo desarrollo, por lo que aún no se pueden utilizar.
+
 ## 🙌 Motivación
 
 [Ana Rangel](https://www.linkedin.com/in/ux-ana-rangel), creadora de [UXCorpRangel](https://www.linkedin.com/company/uxcorprangel/), diseñó esta colección de portafolios como un tributo a la comunidad que la ayudó en el desarrollo de su [portafolio](https://anarangel.github.io/). Ana decidió devolver ese valor con plantillas que cualquier desarrollador pueda usar para mejorar su propio portafolio. Estas plantillas no solo reflejan su creatividad y experiencia, sino que también son una herramienta accesible para que otros desarrolladores destaquen sus proyectos y habilidades de manera profesional.
