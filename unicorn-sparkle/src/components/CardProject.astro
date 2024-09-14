@@ -16,10 +16,12 @@ interface Props {
 const { src, alt, title, description, techs, code, preview } = Astro.props
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/images/*.{jpeg,jpg,png}'
+  '/src/images/projects/*.{jpeg,jpg,png}'
 )
 if (!images[src])
-  throw new Error(`"${src}" no existe en: "src/images/*.{jpeg,jpg,png}"`)
+  throw new Error(
+    `"${src}" no existe en: "/src/images/projects/*.{jpeg,jpg,png}"`
+  )
 ---
 
 <section class="card-project">
