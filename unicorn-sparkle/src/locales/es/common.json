@@ -39,5 +39,41 @@
         }
       ]
     }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "projects": [
+      {
+        "title": "Estelí Buses",
+        "description": "La primer plataforma para conocer los horarios de las terminales de autobuses interlocales del municipio de Estelí, Nicaragua.",
+        "image": "/src/images/esteli-buses-project.jpg",
+        "techs": ["Astro", "TailwindCSS", "Firebase", "PWA"],
+        "code": "Código",
+        "preview": "Vista previa"
+      },
+      {
+        "title": "Portafolio UX Ana Rangel",
+        "description": "Lorem ipsum dolor sit amet consectetur. Faucibus quis sociis at sagittis egestas sed volutpat. Arcu pellentesque elit volutpat quam. Id dictum sagittis hendrerit diam viverra velit. Blandit id viverra quis lectus faucibus egestas ipsum turpis.",
+        "image": "/src/images/ana-rangel-portafolio.jpg",
+        "techs": ["Astro", "CSS", "SASS", "Open Props", "TypeScript"],
+        "code": "Código",
+        "preview": "Vista previa"
+      },
+      {
+        "title": "Calculadora Payoneer Nicaragua",
+        "description": "Descubre una herramienta esencial para freelancers y negocios en Nicaragua. Nuestra Calculadora Payoneer Nicaragua te permite calcular de manera precisa y rápida las tarifas y comisiones al recibir pagos internacionales a través de Payoneer. ¡Empieza a usarla hoy y toma el control de tus finanzas!",
+        "image": "/src/images/calculadora-payoneer-project.jpg",
+        "techs": [
+          "Astro",
+          "TailwindCSS",
+          "React",
+          "TypeScript",
+          "PWA",
+          "Firebase"
+        ],
+        "code": "Código",
+        "preview": "Vista previa"
+      }
+    ]
   }
 }
