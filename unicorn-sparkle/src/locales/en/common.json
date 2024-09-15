@@ -75,5 +75,40 @@
         "preview": "Preview"
       }
     ]
+  },
+  "contributions": {
+    "title": "Contributions",
+    "contributions": [
+      {
+        "src": "/src/images/contributions/advanced-periodontics.jpg",
+        "alt": "Advanced Periodontics",
+        "title": "Advanced Periodontics",
+        "description": "In collaboration with a marketing agency in Texas, United States. I worked on the creation of the website for the Advanced Periodontics & Dental Implants clinic.",
+        "techs": ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
+        "repo": "#",
+        "repo_label": "Repository",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/contributions/advanced-periodontics.jpg",
+        "alt": "Advanced Periodontics",
+        "title": "Advanced Periodontics",
+        "description": "In collaboration with a marketing agency in Texas, United States. I worked on the creation of the website for the Advanced Periodontics & Dental Implants clinic.",
+        "techs": ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
+        "repo": "#",
+        "repo_label": "Repository",
+        "commits": "#"
+      },
+      {
+        "src": "/src/images/contributions/advanced-periodontics.jpg",
+        "alt": "Advanced Periodontics",
+        "title": "Advanced Periodontics",
+        "description": "In collaboration with a marketing agency in Texas, United States. I worked on the creation of the website for the Advanced Periodontics & Dental Implants clinic.",
+        "techs": ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
+        "repo": "#",
+        "repo_label": "Repository",
+        "commits": "#"
+      }
+    ]
   }
 }
