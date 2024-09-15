@@ -1,0 +1,86 @@
+html {
+  .astro,
+  .html {
+    background-color: #7f4932;
+  }
+
+  .css {
+    background-color: #324b7f;
+  }
+
+  .tailwindcss,
+  .typescript,
+  .react {
+    background-color: #32547f;
+  }
+
+  .sass {
+    background-color: #602957;
+  }
+
+  .open-props {
+    background-color: #3a4367;
+  }
+
+  .javascript {
+    background-color: #665e24;
+  }
+
+  .php {
+    background-color: #616161;
+  }
+
+  .wordpress {
+    background-color: #3a4367;
+  }
+
+  .firebase {
+    background-color: #7f6932;
+  }
+
+  .pwa {
+    background-color: #c4c4c4;
+    color: #000;
+  }
+}
+
+html.dark {
+  .astro,
+  .html {
+    background-color: #ffbc96;
+  }
+
+  .css {
+    background-color: #1c80bf5e;
+  }
+
+  .tailwindcss,
+  .typescript,
+  .react {
+    background-color: #bddaff;
+  }
+
+  .sass {
+    background-color: color-mix(in srgb, #602957, #fff 70%);
+  }
+
+  .open-props {
+    background-color: #c1cbf1;
+  }
+
+  .javascript {
+    background-color: #e2da9a;
+  }
+
+  .php {
+    background-color: #cacaca;
+  }
+
+  .wordpress {
+    background-color: #b1b8d1;
+  }
+
+  .firebase {
+    background-color: #ffdd88;
+  }
+}
