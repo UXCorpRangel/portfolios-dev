@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components'
+import { t } from 'i18n:astro'
+import Button from '@components/Button.astro'
+
+const { cta } = t('hero', {
+  returnObjects: true
+})
+const { title, subtitle } = t('contact', {
+  returnObjects: true
+})
+---
+
+<section class="contact">
+  <h2 class="headline-1">{title}</h2>
+  <h3 class="headline-2">{subtitle}</h3>
+  <div class="buttons-container">
+    <Button class="filled" href="#">{cta}</Button>
+    <Button href="#">
+      <Icon name="linkedin" size={24} />
+      <span>LinkedIn</span>
+    </Button>
+  </div>
+</section>
+
+<style>
+  .contact {
+    --bg-size: 14px;
+
+    background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+      linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: var(--bg-size) var(--bg-size);
+    background-repeat: repeat;
+    padding-block: 97px;
+    text-align: center;
+    border: 1px solid hsla(0, 0%, 50%, 0.09);
+    border-radius: 4px;
+
+    & h3 {
+      font-weight: initial;
+    }
+
+    & .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+      margin-top: 24px;
+    }
+  }
+</style>
