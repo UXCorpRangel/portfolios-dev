@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<aside class="socials">
+  <div>
+    <a href="#" aria-label="GitHub">
+      <Icon name="github" size={28} />
+    </a>
+    <a href="#" aria-label="LinkedIn">
+      <Icon name="linkedin" size={28} />
+    </a>
+    <a href="#" aria-label="Mail">
+      <Icon name="mail" size={28} />
+    </a>
+  </div>
+</aside>
+
+<style>
+  .socials {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    translate: 46px;
+
+    & div {
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+
+      &::after {
+        content: '';
+        background-color: var(--text-color);
+        width: 1px;
+        height: 127px;
+        margin-inline: auto;
+      }
+
+      & a {
+        color: var(--color-text);
+        text-decoration: none;
+        transition: var(--transition-text);
+
+        &:hover {
+          color: var(--text-description-color);
+        }
+      }
+    }
+  }
+</style>
