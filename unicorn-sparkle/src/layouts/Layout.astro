@@ -3,6 +3,7 @@ import I18NHead from '@astrolicious/i18n/components/I18nHead.astro'
 import inter from '@fontsource-variable/inter/files/inter-latin-standard-normal.woff2'
 import { Schema } from 'astro-seo-schema'
 import { getHtmlAttrs } from 'i18n:astro'
+import Footer from '@components/Footer.astro'
 import Navbar from '@components/Navbar.astro'
 import 'sanitize.css'
 import 'sanitize.css/assets.css'
@@ -163,6 +164,8 @@ const { title, description, metaRobots } = options
     <Navbar />
 
     <slot />
+
+    <Footer />
 
     <slot name="dynamic-components" />
   </body>

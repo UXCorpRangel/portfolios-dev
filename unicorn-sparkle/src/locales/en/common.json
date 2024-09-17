@@ -119,5 +119,15 @@
   "contact": {
     "title": "Ready to make your dreams come true?",
     "subtitle": "I can boost your project or be part of your team"
+  },
+  "footer": {
+    "designed": {
+      "designed_with": "Designed with",
+      "designed_by": "by"
+    },
+    "developed": {
+      "developed_with": "Made with",
+      "developed_by": "by"
+    }
   }
 }
