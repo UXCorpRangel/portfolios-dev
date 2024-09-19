@@ -13,6 +13,12 @@ html {
   --transition-bg: background-color 150ms ease;
   --transition-text: color 150ms ease;
   --transition-border: border-color 150ms ease;
+
+  scroll-behavior: smooth;
+
+  @media (width >= 768px) {
+    scroll-padding-top: 126px;
+  }
 }
 
 html.dark {
