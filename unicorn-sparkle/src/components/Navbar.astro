@@ -6,12 +6,14 @@ import { switchLocalePath, t } from 'i18n:astro'
 const links = t('navbar', { returnObjects: true })
 ---
 
-<nav>
+<nav id="menu">
   <ul>
     {
-      links.map(({ label, href }) => (
+      links.map(({ label, href }, index) => (
         <li>
-          <a href={href}>{label}</a>
+          <a class:list={{ active: index === 0 }} href={href}>
+            {label}
+          </a>
         </li>
       ))
     }
@@ -25,8 +27,9 @@ const links = t('navbar', { returnObjects: true })
         <span>
           <Icon name="language" size={18} />
         </span>
-        <span>{Astro.url.pathname.includes('/en') ? 'Español' : 'English'}</span
-        >
+        <span>
+          {Astro.url.pathname.includes('/en') ? 'Español' : 'English'}
+        </span>
       </a>
     </li>
     <li>
@@ -181,6 +184,10 @@ const links = t('navbar', { returnObjects: true })
         text-decoration: none;
         transition: color 150ms ease;
 
+        &.active {
+          color: var(--hover-color);
+        }
+
         &:active,
         &:focus {
           color: var(--hover-color);
@@ -196,6 +203,61 @@ const links = t('navbar', { returnObjects: true })
     }
   }
 </style>
+
+<script>
+  const mainSections = document.querySelectorAll('section[id]')
+  const navbarLinks = document.querySelectorAll(
+    '#menu a'
+  ) as NodeListOf<HTMLAnchorElement>
+
+  const handleActiveLink = (sectionId: string | null) => {
+    navbarLinks.forEach((link) => {
+      if (sectionId && link.href.includes(`#${sectionId}`)) {
+        link.classList.add('active')
+      } else if (!sectionId && link.href.includes('#top')) {
+        // Activar el enlace del #top cuando estamos en la parte superior
+        link.classList.add('active')
+      } else {
+        link.classList.remove('active')
+      }
+    })
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let visibleSectionId = null
+      let isAnySectionVisible = false
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isAnySectionVisible = true // Hay al menos una sección visible
+          visibleSectionId = entry.target.id // Guardar el id de la sección visible
+        }
+      })
+
+      // Si no hay ninguna sección visible y estamos en el top de la página
+      if (!isAnySectionVisible && window.scrollY === 0) {
+        handleActiveLink(null) // Activar el enlace de #top
+      } else if (isAnySectionVisible) {
+        handleActiveLink(visibleSectionId) // Activar la sección visible
+      }
+    },
+    {
+      threshold: 0.1, // Detectar cuando la sección está al menos en un 10% visible
+      rootMargin: '0px 0px -40% 0px' // Ajustar el margen para detectar la visibilidad
+    }
+  )
+
+  // Observar cada sección
+  mainSections.forEach((section) => observer.observe(section))
+
+  // Agregar una verificación para cuando el usuario regresa al inicio
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      handleActiveLink(null) // Activar #top cuando el scroll está en el tope
+    }
+  })
+</script>
 
 <script>
   const toggle = document.querySelector('#toggle')
