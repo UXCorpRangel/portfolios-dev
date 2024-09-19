@@ -4,11 +4,11 @@
   "navbar": [
     {
       "label": "Inicio",
-      "href": "/"
+      "href": "#top"
     },
     {
       "label": "Experiencia",
-      "href": "#experiencia"
+      "href": "#experiencia-laboral"
     },
     {
       "label": "Proyectos",

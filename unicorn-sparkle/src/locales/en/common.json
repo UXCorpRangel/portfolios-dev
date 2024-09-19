@@ -4,11 +4,11 @@
   "navbar": [
     {
       "label": "Home",
-      "href": "/en"
+      "href": "#top"
     },
     {
       "label": "Experience",
-      "href": "/en/#experience"
+      "href": "/en/#work-experience"
     },
     {
       "label": "Projects",

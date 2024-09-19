@@ -6,9 +6,15 @@ const { title, jobs } = t('experience', {
 })
 
 const { jobs_title: jobsTitle, jobs_description: jobsDescription } = jobs
+
+const normalizeTitle = title
+  .toLowerCase()
+  .replaceAll(' ', '-')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
 ---
 
-<section class="experience">
+<section id={normalizeTitle} class="experience">
   <h2>{title}</h2>
   <section class="jobs">
     <div class="job-title">
