@@ -33,8 +33,14 @@
       "jobs_description": [
         {
           "title": "Web Frontend Developer",
-          "time": "Dec 2021",
+          "time": ["Dec 2021"],
           "description": "I create modern websites with good UI/UX practices. I also manage SEO, security and performance optimizations to increase conversion and visits.",
+          "list": ["Design of websites", "Optimization of websites"]
+        },
+        {
+          "title": "WordPress Web Developer",
+          "time": ["Nov 2020", "Oct 2021"],
+          "description": "I was in charge of developing WordPress websites for clients in Nicaragua, during my time at the agency I contributed my knowledge in web security by increasing measures and decreasing security gaps in WordPress, configuring plugins and setting HTTP headers such as Content-Security-Policy (CSP), Cross-Origin-Resource-Policy (CORP), Cross-Origin-Opener-Policy (COOP), etc.",
           "list": ["Design of websites", "Optimization of websites"]
         }
       ]
