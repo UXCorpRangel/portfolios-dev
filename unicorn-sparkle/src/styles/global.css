@@ -41,9 +41,14 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.25rem;
   font-weight: 700;
+  text-wrap: balance;
   margin: 0;
+
+  @media (width >= 768px) {
+    font-size: 4rem;
+  }
 }
 
 h2 {
