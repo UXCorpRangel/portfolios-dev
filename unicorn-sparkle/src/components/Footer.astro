@@ -56,10 +56,16 @@ const year = new Date().getFullYear()
     padding-block: 67px;
     text-align: center;
 
+    & p span video {
+      display: inline-block;
+      margin-inline: 4px;
+    }
+
     & P > span:first-child::after {
-      content: ' | ';
+      content: '|';
       display: inline-block;
       translate: 0 -1px;
+      margin-right: 4px;
     }
 
     & a {
