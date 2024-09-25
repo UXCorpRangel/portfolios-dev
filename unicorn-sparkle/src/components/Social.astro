@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <aside class="socials">
-  <div>
+  <nav>
     <a href="#" aria-label="GitHub">
       <Icon name="github" size={28} />
     </a>
@@ -13,36 +13,41 @@ import { Icon } from 'astro-icon/components'
     <a href="#" aria-label="Mail">
       <Icon name="mail" size={28} />
     </a>
-  </div>
+  </nav>
 </aside>
 
 <style>
   .socials {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    translate: 46px;
+    display: none;
 
-    & div {
-      display: flex;
-      gap: 24px;
-      flex-direction: column;
+    @media (width >= 1200px) {
+      display: initial;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      translate: 46px;
 
-      &::after {
-        content: '';
-        background-color: var(--text-color);
-        width: 1px;
-        height: 127px;
-        margin-inline: auto;
-      }
+      & nav {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
 
-      & a {
-        color: var(--color-text);
-        text-decoration: none;
-        transition: var(--transition-text);
+        &::after {
+          content: '';
+          background-color: var(--text-color);
+          width: 1px;
+          height: 127px;
+          margin-inline: auto;
+        }
 
-        &:hover {
-          color: var(--text-description-color);
+        & a {
+          color: var(--color-text);
+          text-decoration: none;
+          transition: var(--transition-text);
+
+          &:hover {
+            color: var(--text-description-color);
+          }
         }
       }
     }
