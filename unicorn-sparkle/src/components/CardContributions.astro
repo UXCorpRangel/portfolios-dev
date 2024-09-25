@@ -78,6 +78,11 @@ if (!images[src])
     border-radius: 4px;
     transition: var(--transition-bg), var(--transition-border);
 
+    @media (width >= 768px) {
+      max-width: 332px;
+      margin-inline: auto;
+    }
+
     & img {
       border-radius: 4px;
     }
