@@ -27,11 +27,16 @@ const { title, subtitle } = t('contact', {
 <style>
   .contact {
     padding-block: 97px;
+    padding-inline: 1rem;
     text-align: center;
     border: 1px solid rgba(128, 128, 128, 0.2);
     border-radius: 4px;
     position: relative;
     overflow: hidden;
+
+    @media (width >= 768px) {
+      padding-inline: 0;
+    }
 
     & h3 {
       font-weight: initial;
@@ -40,8 +45,13 @@ const { title, subtitle } = t('contact', {
     & .buttons-container {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       gap: 13px;
       margin-top: 24px;
+
+      @media (width >= 768px) {
+        flex-direction: row;
+      }
     }
 
     & canvas {
