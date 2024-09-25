@@ -69,27 +69,50 @@ const normalizeTitle = title
     & h2 {
       display: flex;
       gap: 24px;
+      justify-content: center;
       align-items: center;
       white-space: nowrap;
 
-      &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background-color: var(--border-color);
+      @media (width >= 768px) {
+        justify-content: start;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: var(--border-color);
+        }
       }
     }
   }
 
   .jobs {
     display: flex;
+    flex-direction: column;
     gap: 32px;
     margin-top: 48px;
 
+    @media (width >= 768px) {
+      flex-direction: row;
+    }
+
     & .job-title {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      overflow-x: auto;
+      mask: linear-gradient(
+        90deg,
+        transparent,
+        white 0%,
+        white 70%,
+        transparent
+      );
+
+      @media (width >= 768px) {
+        flex-direction: column;
+        mask: none;
+      }
 
       & button {
         background: transparent;
@@ -99,6 +122,7 @@ const normalizeTitle = title
         padding: 16px 24px;
         cursor: pointer;
         text-align: left;
+        white-space: nowrap;
 
         &::before {
           content: '';
@@ -107,18 +131,33 @@ const normalizeTitle = title
           left: 0;
           width: 100%;
           height: 100%;
-          border-left: 2px solid #5a5a5a;
+          border-bottom: 2px solid #5a5a5a;
           transition:
             var(--transition-bg),
             border-color 150ms ease;
+        }
+
+        @media (width >= 768px) {
+          &::before {
+            border-left: 2px solid #5a5a5a;
+            border-bottom: none;
+          }
         }
 
         &.active {
           color: var(--text-color);
 
           &::before {
-            border-left: 3px solid var(--text-color);
-            translate: -0.5px;
+            border-bottom: 3px solid var(--text-color);
+            translate: 0 0.8px;
+          }
+
+          @media (width >= 768px) {
+            &::before {
+              border-left: 3px solid var(--text-color);
+              border-bottom: none;
+              translate: -0.5px;
+            }
           }
         }
 
