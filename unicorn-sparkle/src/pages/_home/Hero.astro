@@ -102,8 +102,12 @@ const {
       }
 
       & p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: var(--text-description-color);
+
+        @media (width >= 768px) {
+          font-size: 1.5rem;
+        }
 
         > strong {
           color: var(--text-color);
