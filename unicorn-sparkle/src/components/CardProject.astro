@@ -71,16 +71,22 @@ if (!images[src])
 <style>
   .card-project {
     display: grid;
-    grid-template-columns: 434px 1fr;
     align-items: center;
     gap: 48px;
     margin-bottom: 86px;
+    max-width: 434px;
+    margin-inline: auto;
 
-    &:nth-child(odd) {
-      grid-template-columns: 1fr 434px;
+    @media (width >= 1200px) {
+      grid-template-columns: 434px 1fr;
+      max-width: fit-content;
 
-      & .description {
-        order: -1;
+      &:nth-child(odd) {
+        grid-template-columns: 1fr 434px;
+
+        & .description {
+          order: -1;
+        }
       }
     }
 
