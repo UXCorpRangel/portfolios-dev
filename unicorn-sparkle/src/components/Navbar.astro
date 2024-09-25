@@ -58,14 +58,19 @@ const links = t('navbar', { returnObjects: true })
 
 <style>
   nav {
-    padding-inline: 1rem;
+    background-color: color-mix(in srgb, var(--bg-color), transparent 30%);
+    backdrop-filter: blur(12px);
+    padding: 1rem;
     text-align: right;
     position: sticky;
-    top: 36px;
+    top: 0;
     z-index: 1;
 
     @media (width >= 768px) {
-      padding-inline: 0;
+      background: none;
+      backdrop-filter: none;
+      padding: 0;
+      top: 36px;
       text-align: initial;
     }
 
