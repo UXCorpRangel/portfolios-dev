@@ -42,6 +42,9 @@ const links = t('navbar', { returnObjects: true })
       </label>
     </li>
   </ul>
+  <button>
+    <Icon name="menu" size={36} />
+  </button>
 </nav>
 
 <!-- Este script se ejecuta cuando se carga la página y pueda aplicar el estilo correspondiente a .toggle-thumb -->
@@ -55,150 +58,188 @@ const links = t('navbar', { returnObjects: true })
 
 <style>
   nav {
+    padding-inline: 1rem;
+    text-align: right;
     position: sticky;
     top: 36px;
     z-index: 1;
 
+    @media (width >= 768px) {
+      padding-inline: 0;
+      text-align: initial;
+    }
+
     & ul {
-      --gap: 35px;
+      display: none;
 
-      background-color: color-mix(in srgb, var(--bg-color), transparent 30%);
-      backdrop-filter: blur(12px);
-      display: flex;
-      align-items: center;
-      gap: var(--gap);
-      margin: 36px auto 0;
-      width: fit-content;
-      border: 1px solid var(--border-color);
-      padding: 16px 24px;
-      border-radius: 1000px;
-      transition: var(--transition-border);
+      @media (width >= 768px) {
+        --gap: 35px;
 
-      & li {
-        position: relative;
+        background-color: color-mix(in srgb, var(--bg-color), transparent 30%);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+        margin: 36px auto 0;
+        width: fit-content;
+        border: 1px solid var(--border-color);
+        padding: 16px 24px;
+        border-radius: 1000px;
+        transition: var(--transition-border);
 
-        /* Agrega el separador entre elementos excepto al último hijo */
-        &:not(:last-child)::after {
-          --size: 3px;
-
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 0;
-          width: var(--size);
-          height: var(--size);
-          translate: calc(var(--gap) / 2) -50%;
-          background-color: var(--bg-separator);
-          border-radius: 50%;
-          transition: var(--transition-bg);
-        }
-
-        & .language {
-          display: flex;
-          align-items: center;
-          gap: 4px;
-
-          & span:first-child {
-            line-height: 0;
-          }
-        }
-
-        & label {
-          --padding: 4px;
-
-          display: inline-block;
+        & li {
           position: relative;
-          width: 50px;
-          height: 24px;
-          padding: var(--padding);
-          cursor: pointer;
 
-          & input {
-            opacity: 0;
-            width: 0;
-            height: 0;
+          /* Agrega el separador entre elementos excepto al último hijo */
+          &:not(:last-child)::after {
+            --size: 3px;
+
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: var(--size);
+            height: var(--size);
+            translate: calc(var(--gap) / 2) -50%;
+            background-color: var(--bg-separator);
+            border-radius: 50%;
+            transition: var(--transition-bg);
           }
 
-          & .toggle-thumb {
-            --toggle-gap: 8px;
-
-            position: absolute;
-            inset: 0;
+          & .language {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: var(--toggle-gap);
-            background-color: var(--bg-toggle-thumb);
-            border-radius: var(--radius);
-            overflow: hidden;
-            transition: var(--transition-bg);
+            gap: 4px;
 
-            &.active::before {
-              /* Calcula el offset para que el .toggle-thumb se ajuste correctamente */
-              --offset: calc(var(--padding) / 2);
+            & span:first-child {
+              line-height: 0;
+            }
+          }
 
-              /* --size: 16px + --toggle-gap: 8px + --offset: 2px = 26px */
-              translate: calc(var(--size) + var(--toggle-gap) + var(--offset));
+          & label {
+            --padding: 4px;
+
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 24px;
+            padding: var(--padding);
+            cursor: pointer;
+
+            & input {
+              opacity: 0;
+              width: 0;
+              height: 0;
             }
 
-            /* Crea el elemento de toggle-thumb */
-            &::before {
-              --size: 16px;
+            & .toggle-thumb {
+              --toggle-gap: 8px;
 
-              content: '';
               position: absolute;
-              top: calc(var(--toggle-gap) / 2);
-              left: calc(var(--toggle-gap) / 2);
-              width: var(--size);
-              height: var(--size);
-              border-radius: 50%;
-              background-color: var(--text-color);
-              transition:
-                translate 300ms ease,
-                var(--transition-bg);
-            }
+              inset: 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: var(--toggle-gap);
+              background-color: var(--bg-toggle-thumb);
+              border-radius: var(--radius);
+              overflow: hidden;
+              transition: var(--transition-bg);
 
-            & svg {
-              /* Ajusta la posición del icono svg del lado izquierdo (luna) */
-              &:nth-child(odd) {
-                translate: calc(var(--toggle-gap) / 2);
+              &.active::before {
+                /* Calcula el offset para que el .toggle-thumb se ajuste correctamente */
+                --offset: calc(var(--padding) / 2);
+
+                /* --size: 16px + --toggle-gap: 8px + --offset: 2px = 26px */
+                translate: calc(
+                  var(--size) + var(--toggle-gap) + var(--offset)
+                );
               }
-              /* Ajusta la posición del icono svg del lado derecho (sol) */
-              &:nth-child(even) {
-                translate: calc((var(--toggle-gap) / 2) * -1);
+
+              /* Crea el elemento de toggle-thumb */
+              &::before {
+                --size: 16px;
+
+                content: '';
+                position: absolute;
+                top: calc(var(--toggle-gap) / 2);
+                left: calc(var(--toggle-gap) / 2);
+                width: var(--size);
+                height: var(--size);
+                border-radius: 50%;
+                background-color: var(--text-color);
+                transition:
+                  translate 300ms ease,
+                  var(--transition-bg);
               }
+
+              & svg {
+                /* Ajusta la posición del icono svg del lado izquierdo (luna) */
+                &:nth-child(odd) {
+                  translate: calc(var(--toggle-gap) / 2);
+                }
+                /* Ajusta la posición del icono svg del lado derecho (sol) */
+                &:nth-child(even) {
+                  translate: calc((var(--toggle-gap) / 2) * -1);
+                }
+              }
+            }
+          }
+        }
+
+        & a {
+          /* Con la función color-mix cambia el color del link aplicandole un 40% del color del fondo */
+          --hover-color: color-mix(
+            in srgb,
+            var(--text-color),
+            var(--bg-color) 40%
+          );
+
+          color: var(--text-color);
+          text-decoration: none;
+          transition: var(--transition-text);
+
+          &.active {
+            color: var(--hover-color);
+          }
+
+          &:active,
+          &:focus {
+            color: var(--hover-color);
+          }
+
+          /* La media query (any-hover: hover) se utiliza para aplicarle un efecto de hover al link */
+          @media (any-hover: hover) {
+            &:hover {
+              color: var(--hover-color);
             }
           }
         }
       }
+    }
 
-      & a {
-        /* Con la función color-mix cambia el color del link aplicandole un 40% del color del fondo */
-        --hover-color: color-mix(
-          in srgb,
-          var(--text-color),
-          var(--bg-color) 40%
-        );
+    & button {
+      /* Con la función color-mix cambia el color del link aplicandole un 40% del color del fondo */
+      --hover-color: color-mix(in srgb, var(--text-color), var(--bg-color) 40%);
 
-        color: var(--text-color);
-        text-decoration: none;
-        transition: color 150ms ease;
+      background: transparent;
+      color: var(--text-color);
+      border: none;
+      padding: 0;
+      transform: var(--transition-text);
 
-        &.active {
+      &:active {
+        color: var(--hover-color);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
           color: var(--hover-color);
         }
+      }
 
-        &:active,
-        &:focus {
-          color: var(--hover-color);
-        }
-
-        /* La media query (any-hover: hover) se utiliza para aplicarle un efecto de hover al link */
-        @media (any-hover: hover) {
-          &:hover {
-            color: var(--hover-color);
-          }
-        }
+      @media (width >= 768px) {
+        display: none;
       }
     }
   }
