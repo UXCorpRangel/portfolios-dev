@@ -182,7 +182,7 @@ class GridLine extends Animatable {
     this.context.beginPath() // Comienza un nuevo camino
     this.context.moveTo(this.startX, this.startY) // Mueve a la posición inicial
     this.context.lineTo(x, y) // Dibuja la línea hasta la posición animada
-    this.context.strokeStyle = 'rgba(128, 128, 128, 0.3)' // Color de las líneas
+    this.context.strokeStyle = 'rgba(128, 128, 128, 0.44)' // Color de las líneas
     this.context.stroke() // Dibuja la línea en el canvas
   }
 }
