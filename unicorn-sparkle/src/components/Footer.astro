@@ -55,6 +55,11 @@ const year = new Date().getFullYear()
   footer {
     padding-block: 67px;
     text-align: center;
+    padding-inline: var(--mobile-inline-padding);
+
+    @media (width >= 768px) {
+      padding-inline: 0;
+    }
 
     & p span video {
       display: inline-block;

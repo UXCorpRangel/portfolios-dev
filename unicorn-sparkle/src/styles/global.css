@@ -10,6 +10,7 @@ html {
   --border-color: #5a5a5a;
   --border-card-contributions-color: #272727;
   --radius: 24px;
+  --mobile-inline-padding: 22px;
   --transition-bg: background-color 150ms ease;
   --transition-text: color 150ms ease;
   --transition-border: border-color 150ms ease;
