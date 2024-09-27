@@ -1,4 +1,4 @@
-![Unicorn Sparkle](../assets/unicorn-sparkle.png)
+![Unicorn Sparkle](./assets/unicorn-sparkle.png)
 
 [![Lighthouse Performance Badge](./performance/lighthouse_performance.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
 [![Lighthouse Accessibility Badge](./performance/lighthouse_accessibility.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)

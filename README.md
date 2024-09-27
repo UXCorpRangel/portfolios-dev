@@ -27,7 +27,7 @@ Una colección única de plantillas de portafolios para desarrolladores. Obtén 
 
 ### [🦄 Unicorn Sparkle](./unicorn-sparkle)
 
-[![Unicorn Sparkle](./assets/unicorn-sparkle.png)](./unicorn-sparkle)
+[![Unicorn Sparkle](./unicorn-sparkle/assets/unicorn-sparkle.png)](./unicorn-sparkle)
 
 [![Lighthouse Performance Badge](./unicorn-sparkle/performance/lighthouse_performance.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
 [![Lighthouse Accessibility Badge](./unicorn-sparkle/performance/lighthouse_accessibility.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
