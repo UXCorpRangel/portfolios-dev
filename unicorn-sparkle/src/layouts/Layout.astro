@@ -3,6 +3,7 @@ import I18NHead from '@astrolicious/i18n/components/I18nHead.astro'
 import inter from '@fontsource-variable/inter/files/inter-latin-standard-normal.woff2'
 import { Schema } from 'astro-seo-schema'
 import { getHtmlAttrs } from 'i18n:astro'
+import Favicons from '@components/Favicons.astro'
 import Footer from '@components/Footer.astro'
 import Navbar from '@components/Navbar.astro'
 import Social from '@components/Social.astro'
@@ -155,9 +156,7 @@ const { title, description, metaRobots } = options
 
     <slot name="schema" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <meta name="theme-color" content="#000" />
+    <Favicons />
 
     <slot name="social-media" />
   </head>
