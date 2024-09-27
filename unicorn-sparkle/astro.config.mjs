@@ -5,7 +5,6 @@ import tunnel from 'astro-tunnel'
 import icon from 'astro-icon'
 import { astroImageTools } from 'astro-imagetools'
 import i18n from '@astrolicious/i18n'
-import playformInline from '@playform/inline'
 import sitemap from 'astro-sitemap'
 import playformCompress from '@playform/compress'
 import compressor from 'astro-compressor'
@@ -29,7 +28,6 @@ export default defineConfig({
       defaultLocale: 'es',
       locales: ['es', 'en']
     }),
-    playformInline(),
     sitemap({
       canonicalURL: URL,
       lastmod: new Date(),
