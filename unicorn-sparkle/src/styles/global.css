@@ -16,6 +16,7 @@ html {
   --transition-border: border-color 150ms ease;
 
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 
   @media (width >= 768px) {
     scroll-padding-top: 126px;
