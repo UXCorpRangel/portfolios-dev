@@ -29,27 +29,15 @@ Una colección única de plantillas de portafolios para desarrolladores. Obtén 
 
 [![Unicorn Sparkle](./assets/unicorn-sparkle.png)](./unicorn-sparkle)
 
-<div style="display: flex; align-items: center; gap: 1rem;">
-
 [![Lighthouse Performance Badge](./unicorn-sparkle/performance/lighthouse_performance.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
 [![Lighthouse Accessibility Badge](./unicorn-sparkle/performance/lighthouse_accessibility.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
 [![Lighthouse Best Practices Badge](./unicorn-sparkle/performance/lighthouse_best-practices.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
 [![Lighthouse SEO Badge](./unicorn-sparkle/performance/lighthouse_seo.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
-</div>
 
 #### Enlaces
 
-<div style="display: flex; align-items: center; gap: 1rem;">
-
 [![Diseño de Unicorn Sparkle](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/RPSa9nHARMmnTemhrGuTCZ/Portafolio-dev?node-id=44-1034&t=dIZVva7mcSSduV6j-1)
-
 [![Sitio web de Unicorn Sparkle](https://img.shields.io/website?url=https%3A%2F%2Funicorn-sparkle.web.app&style=for-the-badge)](https://unicorn-sparkle.web.app)
-
-</div>
 
 #### ¿Cómo usar?
 

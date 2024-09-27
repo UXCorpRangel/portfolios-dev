@@ -1,28 +1,16 @@
 ![Unicorn Sparkle](../assets/unicorn-sparkle.png)
 
-<div style="display: flex; align-items: center; gap: 1rem;">
-
 [![Lighthouse Performance Badge](./performance/lighthouse_performance.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
 [![Lighthouse Accessibility Badge](./performance/lighthouse_accessibility.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
 [![Lighthouse Best Practices Badge](./performance/lighthouse_best-practices.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
 [![Lighthouse SEO Badge](./performance/lighthouse_seo.svg)](https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop)
-
-</div>
 
 # 🦄 Unicorn Sparkle
 
 **Unicorn Sparkle** es la plantilla de portafolio definitiva para desarrolladores que quieren brillar. Combina diseño moderno y funcionalidad mágica para mostrar tus proyectos y habilidades. ¡Destaca con estilo y haz que tu portafolio sea inolvidable!
 
-<div style="display: flex; align-items: center; gap: 1rem;">
-
 [![Diseño de Unicorn Sparkle](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/RPSa9nHARMmnTemhrGuTCZ/Portafolio-dev?node-id=44-1034&t=dIZVva7mcSSduV6j-1)
-
 [![Sitio web de Unicorn Sparkle](https://img.shields.io/website?url=https%3A%2F%2Funicorn-sparkle.web.app&style=for-the-badge)](https://unicorn-sparkle.web.app)
-
-</div>
 
 ## 👀 Características
 
@@ -85,7 +73,7 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 - [src/styles/](./src/styles/): Almacena los archivos de estilos que definen la apariencia visual de la aplicación. Aquí se definen colores, tipografías, márgenes, entre otros elementos visuales.
 
-## 📦 Dependecias
+## 📦 Dependencias
 
 Descubre las principales integraciones de Astro utilizadas en este proyecto:
 
