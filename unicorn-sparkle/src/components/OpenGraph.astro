@@ -1,0 +1,28 @@
+---
+interface Information {
+  title: string
+  description: string
+}
+
+interface Props {
+  information: Information
+  image: string
+}
+const { information, image } = Astro.props
+const { title, description } = information
+---
+
+<meta content={title} property="og:title" />
+<meta content={description} property="og:description" />
+<meta content={image} property="og:image" />
+<meta content={title} property="og:image:alt" />
+<meta property="og:image:type" content="image/png" />
+<meta content="website" property="og:type" />
+<meta content="Portfolio Felix Rangel" property="og:site_name" />
+<meta content={Astro.url.href} property="og:url" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:image:alt" content={title} />
