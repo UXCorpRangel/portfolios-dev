@@ -1,0 +1,81 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<label aria-label="Toggle">
+  <input class="toggle" type="checkbox" />
+  <span class="toggle-thumb">
+    <Icon name="moon" size={16} />
+    <Icon name="sun" size={16} />
+  </span>
+</label>
+
+<style>
+  label {
+    --padding: 4px;
+
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 24px;
+    padding: var(--padding);
+    cursor: pointer;
+
+    & input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    & .toggle-thumb {
+      --toggle-gap: 8px;
+
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--toggle-gap);
+      background-color: var(--bg-toggle-thumb);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition-bg);
+
+      &.active::before {
+        /* Calcula el offset para que el .toggle-thumb se ajuste correctamente */
+        --offset: calc(var(--padding) / 2);
+
+        /* --size: 16px + --toggle-gap: 8px + --offset: 2px = 26px */
+        translate: calc(var(--size) + var(--toggle-gap) + var(--offset));
+      }
+
+      /* Crea el elemento de toggle-thumb */
+      &::before {
+        --size: 16px;
+
+        content: '';
+        position: absolute;
+        top: calc(var(--toggle-gap) / 2);
+        left: calc(var(--toggle-gap) / 2);
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background-color: var(--text-color);
+        transition:
+          translate 300ms ease,
+          var(--transition-bg);
+      }
+
+      & svg {
+        /* Ajusta la posición del icono svg del lado izquierdo (luna) */
+        &:nth-child(odd) {
+          translate: calc(var(--toggle-gap) / 2);
+        }
+        /* Ajusta la posición del icono svg del lado derecho (sol) */
+        &:nth-child(even) {
+          translate: calc((var(--toggle-gap) / 2) * -1);
+        }
+      }
+    }
+  }
+</style>
