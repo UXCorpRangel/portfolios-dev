@@ -1,0 +1,432 @@
+---
+import { Icon } from 'astro-icon/components'
+import { switchLocalePath, t } from 'i18n:astro'
+import ToggleSwitch from '@components/ToggleSwitch.astro'
+
+// Obtenemos los enlaces de la navegación de locales
+const links = t('navbar', { returnObjects: true })
+---
+
+<nav id="menu">
+  <ul>
+    {
+      links.map(({ label, href }, index) => (
+        <li>
+          <a class:list={{ active: index === 0 }} href={href}>
+            {label}
+          </a>
+        </li>
+      ))
+    }
+    <li>
+      <a
+        class="language"
+        href={Astro.url.pathname.includes('/en')
+          ? switchLocalePath('es')
+          : switchLocalePath('en')}
+      >
+        <span>
+          <Icon name="language" size={18} />
+        </span>
+        <span>
+          {Astro.url.pathname.includes('/en') ? 'Español' : 'English'}
+        </span>
+      </a>
+    </li>
+    <li>
+      <ToggleSwitch />
+    </li>
+  </ul>
+  <button id="menu-button">
+    <Icon name="menu" size={36} />
+  </button>
+</nav>
+
+<dialog>
+  <nav>
+    {links.map(({ label, href }) => <a href={href}>{label}</a>)}
+    <a
+      class="language"
+      href={Astro.url.pathname.includes('/en')
+        ? switchLocalePath('es')
+        : switchLocalePath('en')}
+    >
+      <span>
+        <Icon name="language" size={18} />
+      </span>
+      <span>
+        {Astro.url.pathname.includes('/en') ? 'Español' : 'English'}
+      </span>
+    </a>
+    <div>
+      <ToggleSwitch />
+    </div>
+  </nav>
+  <button id="close" aria-label="Close">
+    <Icon name="close" size={28} />
+  </button>
+</dialog>
+
+<!-- Este script se ejecuta cuando se carga la página y pueda aplicar el estilo correspondiente a .toggle-thumb -->
+<script is:inline>
+  if (localStorage.getItem('dark-theme') === 'true') {
+    document.querySelector('.toggle-thumb').classList.add('active')
+  } else {
+    document.querySelector('.toggle-thumb').classList.remove('active')
+  }
+</script>
+
+<style>
+  nav#menu {
+    background-color: color-mix(in srgb, var(--bg-color), transparent 30%);
+    backdrop-filter: blur(12px);
+    padding-block: 1rem;
+    padding-inline: var(--mobile-inline-padding);
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    @media (width >= 768px) {
+      background: none;
+      backdrop-filter: none;
+      padding: 0;
+      top: 36px;
+      text-align: initial;
+    }
+
+    & ul {
+      display: none;
+
+      @media (width >= 768px) {
+        --gap: 35px;
+
+        background-color: color-mix(in srgb, var(--bg-color), transparent 30%);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+        margin: 36px auto 0;
+        width: fit-content;
+        border: 1px solid var(--border-color);
+        padding: 16px 24px;
+        border-radius: 1000px;
+        transition: var(--transition-border);
+
+        & li {
+          position: relative;
+
+          /* Agrega el separador entre elementos excepto al último hijo */
+          &:not(:last-child)::after {
+            --size: 3px;
+
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: var(--size);
+            height: var(--size);
+            translate: calc(var(--gap) / 2) -50%;
+            background-color: var(--bg-separator);
+            border-radius: 50%;
+            transition: var(--transition-bg);
+          }
+
+          & .language {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            & span:first-child {
+              line-height: 0;
+            }
+          }
+        }
+
+        & a {
+          /* Con la función color-mix cambia el color del link aplicandole un 40% del color del fondo */
+          --hover-color: color-mix(
+            in srgb,
+            var(--text-color),
+            var(--bg-color) 40%
+          );
+
+          color: var(--text-color);
+          text-decoration: none;
+          transition: var(--transition-text);
+
+          &.active {
+            color: var(--hover-color);
+          }
+
+          &:active,
+          &:focus {
+            color: var(--hover-color);
+          }
+
+          /* La media query (any-hover: hover) se utiliza para aplicarle un efecto de hover al link */
+          @media (any-hover: hover) {
+            &:hover {
+              color: var(--hover-color);
+            }
+          }
+        }
+      }
+    }
+
+    & button {
+      /* Con la función color-mix cambia el color del link aplicandole un 40% del color del fondo */
+      --hover-color: color-mix(in srgb, var(--text-color), var(--bg-color) 40%);
+
+      background: transparent;
+      color: var(--text-color);
+      border: none;
+      padding: 0;
+      transform: var(--transition-text);
+
+      &:active {
+        color: var(--hover-color);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--hover-color);
+        }
+      }
+
+      @media (width >= 768px) {
+        display: none;
+      }
+    }
+  }
+
+  dialog {
+    position: fixed;
+    background-color: var(--bg-secondary-color);
+    border-radius: var(--radius);
+    width: 70vw;
+    border: 1px solid var(--border-color);
+    transition:
+      opacity 300ms ease,
+      transform 300ms ease,
+      overlay 500ms ease allow-discrete,
+      display 300ms ease allow-discrete;
+    opacity: 0;
+    transform: translateY(1em);
+    backdrop-filter: blur(0px);
+
+    &::backdrop {
+      background-color: hsl(0 0 0 / 0);
+      backdrop-filter: blur(4px);
+      transition:
+        display 300ms allow-discrete,
+        overlay 500ms allow-discrete,
+        background-color 300ms;
+    }
+
+    &[open]::backdrop {
+      background-color: hsl(0 0 0 / 50%);
+    }
+
+    &[open] {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @starting-style {
+      &[open] {
+        opacity: 0;
+        transform: translateY(-1em);
+      }
+
+      &[open]::backdrop {
+        background-color: hsl(0 0 0 / 0);
+      }
+    }
+
+    & nav {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 24px;
+      text-align: center;
+      color: var(--text-color);
+
+      & a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: var(--transition-text);
+
+        &:hover {
+          color: var(--text-description-color);
+        }
+      }
+    }
+
+    & #close {
+      --position: 8px;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      color: var(--text-color);
+      border: none;
+      translate: calc(var(--position) * -1) var(--position);
+
+      &:active {
+        color: var(--text-description-color);
+      }
+    }
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const menuButton = document.querySelector('#menu-button')
+  const menuDialog = document.querySelector('dialog')
+  const closeButton = document.querySelector('#close')
+  const links = document.querySelectorAll('dialog a')
+
+  menuButton?.addEventListener('click', () => {
+    document.body.classList.add('no-scroll')
+    menuDialog?.showModal()
+  })
+
+  closeButton?.addEventListener('click', () => {
+    document.body.classList.remove('no-scroll')
+    menuDialog?.close()
+  })
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('no-scroll')
+      menuDialog?.close()
+    })
+  })
+</script>
+
+<script>
+  const mainSections = document.querySelectorAll('section[id]')
+  const navbarLinks = document.querySelectorAll(
+    '#menu a'
+  ) as NodeListOf<HTMLAnchorElement>
+
+  const handleActiveLink = (sectionId: string | null) => {
+    navbarLinks.forEach((link) => {
+      if (sectionId && link.href.includes(`#${sectionId}`)) {
+        link.classList.add('active')
+      } else if (!sectionId && link.href.includes('#top')) {
+        // Activar el enlace del #top cuando estamos en la parte superior
+        link.classList.add('active')
+      } else {
+        link.classList.remove('active')
+      }
+    })
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let visibleSectionId = null
+      let isAnySectionVisible = false
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isAnySectionVisible = true // Hay al menos una sección visible
+          visibleSectionId = entry.target.id // Guardar el id de la sección visible
+        }
+      })
+
+      // Si no hay ninguna sección visible y estamos en el top de la página
+      if (!isAnySectionVisible && window.scrollY === 0) {
+        handleActiveLink(null) // Activar el enlace de #top
+      } else if (isAnySectionVisible) {
+        handleActiveLink(visibleSectionId) // Activar la sección visible
+      }
+    },
+    {
+      threshold: 0.1, // Detectar cuando la sección está al menos en un 10% visible
+      rootMargin: '0px 0px -40% 0px' // Ajustar el margen para detectar la visibilidad
+    }
+  )
+
+  // Observar cada sección
+  mainSections.forEach((section) => observer.observe(section))
+
+  // Agregar una verificación para cuando el usuario regresa al inicio
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      handleActiveLink(null) // Activar #top cuando el scroll está en el tope
+    }
+  })
+</script>
+
+<script>
+  const toggleSwitchs = document.querySelectorAll('.toggle')
+  const toggleThumbs = document.querySelectorAll('.toggle-thumb')
+
+  // Establecemos una variable global
+  let darkModeState = false
+
+  // Detectamos si el usuario tiene habilitado el modo oscuro
+  const getScheme = window.matchMedia('(prefers-color-scheme: dark)')
+
+  function toggleDarkMode(state: boolean) {
+    document.documentElement.classList.toggle('dark', state)
+    toggleThumbs.forEach((thumb) => {
+      thumb.classList.toggle('active', state)
+    })
+
+    // Establecemos el valor de la variable global
+    // con el valor del parámetro state
+    darkModeState = state
+  }
+
+  // Creamos una nueva función para almacenar el valor en localStorage
+  function setSchemeState(state: boolean) {
+    localStorage.setItem('dark-theme', String(state))
+  }
+
+  // toggleDarkMode(getScheme.matches)
+  // Reemplazamos el valor obtenido por la variable getScheme
+  // por el valor que esté guardado en localStorage, para que
+  // al cargar la página verifique el valor almacenado en
+  // localStorage
+  toggleDarkMode(localStorage.getItem('dark-theme') === 'true')
+
+  // Escuchamos los cambios en las configuración del
+  // del sistema operativo para alternar de tema
+  getScheme.addEventListener('change', () => {
+    // Negamos el valor guardado dentro de la función toggleDarkMode
+    // a la variable global darkModeState y se lo asignamos así misma
+    darkModeState = !darkModeState
+
+    // document.documentElement.classList.toggle('dark')
+    // Llamamos a la funciones toggleDarkMode para alternar el tema
+    // y setSchemeState para guardar el valor en localStorage
+    toggleDarkMode(darkModeState)
+    setSchemeState(darkModeState)
+  })
+
+  toggleSwitchs.forEach((toggle) => {
+    toggle.addEventListener('change', () => {
+      darkModeState = !darkModeState
+
+      toggleDarkMode(darkModeState)
+      setSchemeState(darkModeState)
+    })
+  })
+
+  window.addEventListener('keydown', (e) => {
+    // Detectamos si las teclas Alt, Shift y D están presionadas
+    if (e.altKey === true && e.shiftKey === true && e.key === 'D') {
+      darkModeState = !darkModeState
+
+      toggleDarkMode(darkModeState)
+      setSchemeState(darkModeState)
+    }
+  })
+</script>

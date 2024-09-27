@@ -1,0 +1,158 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Icon } from 'astro-icon/components'
+import { Picture } from 'astro:assets'
+import '@styles/tech-colors.css'
+
+interface Props {
+  src: string
+  alt: string
+  title: string
+  description: string
+  techs: string[]
+  code: string
+  preview: string
+}
+
+const { src, alt, title, description, techs, code, preview } = Astro.props
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/images/projects/*.{jpeg,jpg,png}'
+)
+if (!images[src])
+  throw new Error(
+    `"${src}" no existe en: "/src/images/projects/*.{jpeg,jpg,png}"`
+  )
+---
+
+<section class="card-project">
+  <div>
+    <a href="#">
+      <Picture
+        src={images[src]()}
+        alt={alt}
+        width={434}
+        height={288}
+        formats={['avif', 'webp']}
+        fallbackFormat="webp"
+      />
+    </a>
+  </div>
+  <div class="description">
+    <h3><a href="#">{title}</a></h3>
+    <div class="badges">
+      {
+        techs.map((tech) => {
+          const techLower = tech.toLowerCase().replaceAll(' ', '-')
+
+          return (
+            <span class={`badge-tech ${techLower}`}>
+              <Icon name={`techs/${techLower}`} size={24} />
+              <span>{tech}</span>
+            </span>
+          )
+        })
+      }
+    </div>
+    <p>{description}</p>
+    <div class="links">
+      <a href="#">
+        <Icon name="github" size={24} />
+        {code}
+      </a>
+      <a href="#">
+        <Icon name="link" size={24} />
+        {preview}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .card-project {
+    display: grid;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 86px;
+    max-width: 434px;
+    margin-inline: auto;
+
+    @media (width >= 1200px) {
+      grid-template-columns: 434px 1fr;
+      max-width: fit-content;
+
+      &:nth-child(odd) {
+        grid-template-columns: 1fr 434px;
+
+        & .description {
+          order: -1;
+        }
+      }
+    }
+
+    & img {
+      border-radius: 4px;
+    }
+
+    & .description {
+      & h3 {
+        & a {
+          color: inherit;
+          text-decoration: none;
+          transition: var(--transition-text);
+
+          &:hover {
+            color: var(--text-description-color);
+          }
+        }
+      }
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 8px;
+
+        & .badge-tech {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 4px 12px;
+          border-radius: 1000px;
+          font-size: 0.875rem;
+        }
+      }
+
+      & .links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & a {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--text-color);
+          text-decoration: none;
+          font-weight: 500;
+          transition: var(--transition-text);
+          padding: 8px 24px;
+          border-radius: 1000px;
+          border: 1px solid var(--text-color);
+          transition: var(--transition-bg);
+
+          &:hover {
+            background-color: var(--bg-secondary-color);
+          }
+        }
+      }
+
+      & p {
+        color: var(--text-description-color);
+        font-size: 1.125rem;
+      }
+
+      & > * + * {
+        margin-top: 24px;
+      }
+    }
+  }
+</style>

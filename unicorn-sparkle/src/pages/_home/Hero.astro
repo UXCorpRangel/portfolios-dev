@@ -1,0 +1,155 @@
+---
+import { Icon } from 'astro-icon/components'
+import { t } from 'i18n:astro'
+import Button from '@components/Button.astro'
+
+const {
+  job_availability: jobAvailability,
+  title,
+  job_title: jobTitle,
+  description,
+  cta
+} = t('hero', {
+  returnObjects: true
+})
+---
+
+<section class="hero">
+  <div>
+    <div class="badge">
+      <span class="dot"></span>
+      <span>{jobAvailability}</span>
+    </div>
+    <h1>{title}</h1>
+    <section>
+      <p set:html={jobTitle} />
+      <p>{description}</p>
+    </section>
+    <section class="button-container">
+      <Button class="filled" href="#">{cta}</Button>
+      <Button href="#">
+        <Icon name="linkedin" size={24} />
+        <span>LinkedIn</span>
+      </Button>
+    </section>
+    <canvas id="stars"></canvas>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-top: 113px;
+    padding-bottom: 56px;
+
+    @media (width >= 768px) {
+      padding-block: 129px;
+    }
+
+    & > div {
+      position: relative;
+      margin-inline: auto;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 120px 29px;
+      overflow: hidden;
+
+      @media (width >= 992px) {
+        padding: 148px 125px;
+      }
+
+      & canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      /* Separador entre contenido */
+      & > * + *:not(canvas) {
+        margin-top: 24px;
+      }
+
+      & .badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        margin-inline: auto;
+        background-color: var(--bg-secondary-color);
+        font-size: 0.875rem;
+        padding: 6px 12px;
+        border: 1px solid var(--text-color);
+        border-radius: 1000px;
+        transition: var(--transition-bg), var(--transition-border);
+
+        & .dot {
+          --size: 6px;
+          --color: #22c55e;
+
+          width: var(--size);
+          height: var(--size);
+          background-color: var(--color);
+          border-radius: 50%;
+          box-shadow: 0 0 0 0 var(--color);
+          transform: scale(1);
+          animation: pulse 2s infinite;
+        }
+      }
+
+      & p {
+        font-size: 1.25rem;
+        color: var(--text-description-color);
+
+        @media (width >= 768px) {
+          font-size: 1.5rem;
+        }
+
+        > strong {
+          color: var(--text-color);
+        }
+      }
+
+      & .button-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 13px;
+
+        @media (width >= 768px) {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  /* Agregar variables de color en section para que el keyframes funcione */
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 6px transparent;
+    }
+
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
+</style>
+
+<script>
+  import { StarField } from '@scripts/starfield'
+
+  const canvas = document.querySelector('#stars') as HTMLCanvasElement
+  new StarField(canvas)
+</script>

@@ -1,0 +1,244 @@
+---
+import { t } from 'i18n:astro'
+
+const { title, jobs } = t('experience', {
+  returnObjects: true
+})
+
+const { jobs_title: jobsTitle, jobs_description: jobsDescription } = jobs
+
+const normalizeTitle = title
+  .toLowerCase()
+  .replaceAll(' ', '-')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+---
+
+<section id={normalizeTitle} class="experience">
+  <h2>{title}</h2>
+  <section class="jobs">
+    <div class="job-title">
+      {
+        jobsTitle.map((title, index) => (
+          <button
+            class:list={[
+              'headline-3 tabbutton',
+              {
+                active: index === 0
+              }
+            ]}
+          >
+            {title}
+          </button>
+        ))
+      }
+    </div>
+    <div class="jobs-descriptions">
+      {
+        jobsDescription.map(({ title, time, description, list }, index) => (
+          <div class:list={['description tabcontent', { active: index === 0 }]}>
+            <h3>{title}</h3>
+            <div class="job-time">
+              {time.map((time, index) => (
+                <>
+                  <time class="headline-4" datetime={time}>
+                    {time}
+                  </time>
+                  {index % 2 === 0 && <span>—</span>}
+                </>
+              ))}
+              {time.length <= 1 && <span class="badge">Actual</span>}
+            </div>
+            <p>{description}</p>
+            <ul>
+              {list.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</section>
+
+<style>
+  .experience {
+    padding-bottom: 120px;
+
+    & h2 {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+
+      @media (width >= 768px) {
+        justify-content: start;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: var(--border-color);
+        }
+      }
+    }
+  }
+
+  .jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 48px;
+
+    @media (width >= 768px) {
+      flex-direction: row;
+    }
+
+    & .job-title {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      mask: linear-gradient(
+        90deg,
+        transparent,
+        white 0%,
+        white 70%,
+        transparent
+      );
+
+      @media (width >= 768px) {
+        flex-direction: column;
+        mask: none;
+      }
+
+      & button {
+        background: transparent;
+        color: var(--text-description-color);
+        position: relative;
+        border: none;
+        padding: 16px 24px;
+        cursor: pointer;
+        text-align: left;
+        white-space: nowrap;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-bottom: 2px solid #5a5a5a;
+          transition:
+            var(--transition-bg),
+            border-color 150ms ease;
+        }
+
+        @media (width >= 768px) {
+          &::before {
+            border-left: 2px solid #5a5a5a;
+            border-bottom: none;
+          }
+        }
+
+        &.active {
+          color: var(--text-color);
+
+          &::before {
+            border-bottom: 3px solid var(--text-color);
+            translate: 0 0.8px;
+          }
+
+          @media (width >= 768px) {
+            &::before {
+              border-left: 3px solid var(--text-color);
+              border-bottom: none;
+              translate: -0.5px;
+            }
+          }
+        }
+
+        @media (any-hover: hover) {
+          &:hover {
+            color: var(--text-color);
+            transition: var(--transition-text);
+          }
+        }
+      }
+    }
+
+    & .jobs-descriptions {
+      flex: 1;
+
+      & .description {
+        display: none;
+        animation: fade 1200ms ease;
+
+        &.active {
+          display: block;
+        }
+
+        & > * + *,
+        & ul li {
+          margin-top: 16px;
+        }
+
+        & .job-time {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+          & .badge {
+            background-color: var(--bg-secondary-color);
+            border-radius: 1000px;
+            padding: 2px 12px;
+            border: 1px solid var(--text-color);
+            font-size: 0.875rem;
+            transition: var(--transition-bg);
+          }
+        }
+
+        p {
+          text-wrap: pretty;
+        }
+
+        & .headline-4,
+        & p,
+        & ul {
+          color: var(--text-description-color);
+        }
+      }
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  const tabButtons = document.querySelectorAll('.tabbutton')
+  const tabContents = document.querySelectorAll(
+    '.tabcontent'
+  ) as NodeListOf<HTMLDivElement>
+
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      tabButtons.forEach((tab) => {
+        tab.classList.toggle('active')
+      })
+
+      tabContents.forEach((content) => {
+        content.classList.toggle('active')
+      })
+    })
+  })
+</script>

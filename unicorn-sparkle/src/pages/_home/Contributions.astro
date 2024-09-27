@@ -1,0 +1,83 @@
+---
+import { t } from 'i18n:astro'
+import CardContributions from '@components/CardContributions.astro'
+
+const { title, contributions } = t('contributions', {
+  returnObjects: true
+})
+---
+
+<section class="contributions">
+  <h2>
+    <span>{title}</span>
+  </h2>
+  <div class="card-contributions">
+    {
+      contributions.map(
+        ({
+          src,
+          alt,
+          title,
+          description,
+          techs,
+          repo,
+          repo_label: repoLabel,
+          commits
+        }) => (
+          <CardContributions
+            src={src}
+            alt={alt}
+            title={title}
+            description={description}
+            techs={techs}
+            repo={repo}
+            repoLabel={repoLabel}
+            commits={commits}
+          />
+        )
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .contributions {
+    padding-bottom: 120px;
+
+    & h2 {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      margin-bottom: 48px;
+
+      @media (width >= 768px) {
+        justify-content: start;
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: var(--border-color);
+        }
+      }
+    }
+
+    & .card-contributions {
+      display: grid;
+      align-items: center;
+      gap: 36px;
+
+      @media (width >= 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (width >= 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+</style>

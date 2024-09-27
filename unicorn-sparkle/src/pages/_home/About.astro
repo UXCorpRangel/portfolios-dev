@@ -1,0 +1,97 @@
+---
+import felixicaza from '@images/felixicaza.jpg'
+import { Picture } from 'astro:assets'
+import { t } from 'i18n:astro'
+
+const { title, subtitle, description } = t('about', {
+  returnObjects: true
+})
+
+const normalizeTitle = title
+  .toLowerCase()
+  .replaceAll(' ', '-')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+---
+
+<section id={normalizeTitle} class="about">
+  <h2>{title}</h2>
+  <section class="info">
+    <div class="picture">
+      <Picture
+        src={felixicaza}
+        alt="Felix Icaza"
+        width={366}
+        height={361}
+        formats={['avif', 'webp']}
+        fallbackFormat="webp"
+      />
+    </div>
+    <div class="description">
+      <h3 class="headline-2">{subtitle}</h3>
+      <p>{description}</p>
+    </div>
+  </section>
+</section>
+
+<style>
+  .about {
+    padding-bottom: 120px;
+
+    & h2 {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+
+      @media (width >= 768px) {
+        justify-content: start;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: var(--border-color);
+        }
+      }
+    }
+    & .info {
+      background-color: var(--bg-card-contributions);
+      border-radius: 4px;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      margin-top: 48px;
+
+      @media (width >= 768px) {
+        padding: 48px;
+        max-width: 470px;
+        margin-inline: auto;
+      }
+
+      @media (width >= 1200px) {
+        flex-direction: row;
+        max-width: fit-content;
+      }
+
+      & .picture {
+        img {
+          border-radius: 4px;
+        }
+      }
+
+      & .description {
+        flex: 1;
+
+        & p {
+          margin-top: 24px;
+          color: var(--text-description-color);
+        }
+      }
+    }
+  }
+</style>

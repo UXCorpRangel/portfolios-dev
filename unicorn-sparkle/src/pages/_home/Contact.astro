@@ -1,0 +1,100 @@
+---
+import { Icon } from 'astro-icon/components'
+import { t } from 'i18n:astro'
+import Button from '@components/Button.astro'
+
+const { cta } = t('hero', {
+  returnObjects: true
+})
+const { title, subtitle } = t('contact', {
+  returnObjects: true
+})
+---
+
+<section class="contact">
+  <h2 class="headline-1">{title}</h2>
+  <h3 class="headline-2">{subtitle}</h3>
+  <div class="buttons-container">
+    <Button class="filled" href="#">{cta}</Button>
+    <Button href="#">
+      <Icon name="linkedin" size={24} />
+      <span>LinkedIn</span>
+    </Button>
+  </div>
+  <canvas id="grid"></canvas>
+</section>
+
+<style>
+  .contact {
+    padding-block: 97px;
+    padding-inline: 1rem;
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.33);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+
+    @media (width >= 768px) {
+      padding-inline: 0;
+    }
+
+    & h3 {
+      font-weight: initial;
+    }
+
+    & .buttons-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 13px;
+      margin-top: 24px;
+
+      @media (width >= 768px) {
+        flex-direction: row;
+      }
+    }
+
+    & canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+</style>
+
+<script>
+  import { GridField } from '@scripts/gridfield'
+
+  const canvas = document.querySelector('#grid') as HTMLCanvasElement
+
+  if (canvas) {
+    const gridField = new GridField(canvas)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Inicia la animación cuando el canvas entra en la vista
+            gridField.play()
+            // Deja de observar el canvas
+            observer.unobserve(canvas)
+          }
+        })
+      },
+      {
+        // Activar cuando al menos el 50% del canvas sea visible
+        threshold: 0.5
+      }
+    )
+
+    // Observa el canvas
+    observer.observe(canvas)
+  } else {
+    // Mensaje de error si no se encuentra el canvas
+    console.error("No se encontró el elemento 'canvas'")
+  }
+</script>

@@ -1,0 +1,42 @@
+---
+interface Props {
+  href: string
+  class?: string
+}
+
+const { href, class: className } = Astro.props
+---
+
+<a class={className} href={href}>
+  <slot />
+</a>
+
+<style>
+  a {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 40px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--text-color);
+    border-radius: 1000px;
+    transition: var(--transition-bg), var(--transition-text);
+
+    &:hover {
+      background-color: var(--bg-secondary-color);
+    }
+
+    &.filled {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transition: var(--transition-bg), var(--transition-text);
+
+      &:hover {
+        background-color: var(--bg-secondary-color);
+        color: var(--text-color);
+      }
+    }
+  }
+</style>

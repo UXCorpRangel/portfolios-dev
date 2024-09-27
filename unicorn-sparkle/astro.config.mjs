@@ -1,18 +1,17 @@
 import { defineConfig } from 'astro/config'
+import { URL } from './src/data/constants'
 
 import tunnel from 'astro-tunnel'
+import icon from 'astro-icon'
 import { astroImageTools } from 'astro-imagetools'
 import i18n from '@astrolicious/i18n'
-import playformInline from '@playform/inline'
 import sitemap from 'astro-sitemap'
 import playformCompress from '@playform/compress'
 import compressor from 'astro-compressor'
 
-const website = 'https://example.com'
-
 // https://astro.build/config
 export default defineConfig({
-  site: website,
+  site: URL,
   server: {
     host: true
   },
@@ -23,18 +22,21 @@ export default defineConfig({
   compressHTML: false,
   integrations: [
     tunnel(),
+    icon(),
     astroImageTools,
     i18n({
-      defaultLocale: 'en',
-      locales: ['en', 'es']
+      defaultLocale: 'es',
+      locales: ['es', 'en']
     }),
-    playformInline(),
     sitemap({
-      canonicalURL: website,
+      canonicalURL: URL,
       lastmod: new Date(),
       createLinkInHead: false,
       xmlns: {
-        xhtml: true
+        xhtml: true,
+        news: false,
+        video: false,
+        image: false
       },
       i18n: {
         defaultLocale: 'es',
