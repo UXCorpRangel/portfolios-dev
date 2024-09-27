@@ -51,7 +51,7 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 - [public/media/](./public/media/): Almacena archivos de medios como videos que son utilizados en la aplicación.
 
-- [public/og/](./public/og/): Esta carpeta probablemente almacena las imágenes Open Graph, que son utilizadas para previsualizaciones cuando la página es compartida en redes sociales.
+- [public/og/](./public/og/): Esta carpeta almacena las imágenes Open Graph que son utilizadas para previsualizaciones cuando la página es compartida en redes sociales.
 
 - [src/components/](./src/components/): Contiene los componentes reutilizables que pueden ser usados en diferentes partes de la aplicación.
 
