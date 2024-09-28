@@ -1,0 +1,15 @@
+version: 2
+updates:
+   - package-ecosystem: "npm"
+     directory: "/"
+     schedule:
+        interval: "weekly"
+        day: "sunday"
+        time: "00:00"
+        timezone: "America/Costa_Rica"
+     open-pull-requests-limit: 20
+     target-branch: "main"
+     labels:
+        - "dependencies"
+     assignees:
+        - "felixicaza"
