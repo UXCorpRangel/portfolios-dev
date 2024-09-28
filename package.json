@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.3.1",
-    "@typescript-eslint/eslint-plugin": "7.0.1",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.0.0",
     "astro-eslint-parser": "1.0.2",
     "eslint": "8.57.0",
