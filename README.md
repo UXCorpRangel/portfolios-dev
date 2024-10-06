@@ -4,6 +4,18 @@
 
 Una colección única de plantillas de portafolios para desarrolladores. Obtén un portafolio profesional, moderno y personalizable, resalta tus proyectos, tu experiencia y destaca en el mundo tech con diseños que impresionan.
 
+## 📖 Tabla de contenidos
+
+- [🙌 Motivación](#-motivaci%C3%B3n)
+- [👀 Características](#-caracter%C3%ADsticas)
+- [📦 Stack](#-stack)
+- [✨ Plantillas](#-plantillas)
+  - [🦄 Unicorn Sparkle](#-unicorn-sparkle)
+- [❤️ Plantillas de la comunidad](#%EF%B8%8F-plantillas-de-la-comunidad)
+- [🤝 Contribuir](#-contribuir)
+- [📈 Actividad](#-actividad)
+- [📄 Licencia](#-licencia)
+
 ## 🙌 Motivación
 
 [Ana Rangel][anarangel], creadora de [UXCorpRangel][uxcorprangel], diseñó esta colección de portafolios como un tributo a la comunidad que la ayudó en el desarrollo de su [portafolio][portafolio]. Ana decidió devolver ese valor con plantillas que cualquier desarrollador pueda usar para mejorar su propio portafolio. Estas plantillas no solo reflejan su creatividad y experiencia, sino que también son una herramienta accesible para que otros desarrolladores destaquen sus proyectos y habilidades de manera profesional.
@@ -59,13 +71,23 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 [👉 Leer más][unicorn-sparkle-folder]
 
+## ❤️ Plantillas de la comunidad
+
+Descubre quién está usando o se inspiró por esta colección de plantillas para crear su propio portafolio.
+
+#### <img src="./assets/icons/html5.svg" height="14" alt="HTML 5" style="transform: translateY(1.2px)"> Vanilla
+
+- [Portfolio_with_UX_UI_Design](https://github.com/Edu980-8/Portfolio_with_UX_UI_Design) - [Ver demo](https://edu980-8.github.io/Portfolio_with_UX_UI_Design/)
+
+¿Usaste o te inspiraste de alguna de estas plantillas? ¡[Haz un pull request](https://github.com/UXCorpRangel/portfolios-dev/pulls) y lo añadiremos a esta lista para que todos puedan verlo! Tu aporte es muy apreciado.
+
 ## 🤝 Contribuir
 
 Si deseas contribuir a este proyecto, puedes hacerlo leyendo la [Guía de Contribución](./CONTRIBUTING.md).
 
 ## 📈 Actividad
 
-![Actividad](https://repobeats.axiom.co/api/embed/4d0c6dc938912ea72b7102d4d22d32d7659df340.svg "Repobeats analytics image")
+![Actividad](https://repobeats.axiom.co/api/embed/4d0c6dc938912ea72b7102d4d22d32d7659df340.svg 'Repobeats analytics image')
 
 ## 📄 Licencia
 
