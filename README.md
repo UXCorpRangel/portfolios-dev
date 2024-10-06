@@ -63,6 +63,10 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 Si deseas contribuir a este proyecto, puedes hacerlo leyendo la [Guía de Contribución](./CONTRIBUTING.md).
 
+## 📈 Activity
+
+![Activity](https://repobeats.axiom.co/api/embed/4d0c6dc938912ea72b7102d4d22d32d7659df340.svg "Repobeats analytics image")
+
 ## 📄 Licencia
 
 Este proyecto utiliza la Licencia MIT. Consulte el [Archivo de Licencia](./LICENCE) para obtener más información.
