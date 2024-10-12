@@ -11,6 +11,7 @@ Una colección única de plantillas de portafolios para desarrolladores. Obtén 
 - [📦 Stack](#-stack)
 - [✨ Plantillas](#-plantillas)
   - [🦄 Unicorn Sparkle](#-unicorn-sparkle)
+  - [🔮 Mistical Unicorn](#-mistical-unicorn)
 - [❤️ Plantillas de la comunidad](#%EF%B8%8F-plantillas-de-la-comunidad)
 - [🤝 Contribuir](#-contribuir)
 - [📈 Actividad](#-actividad)
@@ -71,6 +72,11 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 [👉 Leer más][unicorn-sparkle-folder]
 
+### [🔮 Mistical Unicorn][mistical-unicorn-folder]
+
+> [!IMPORTANT]
+> 🚧 En construcción 🚧
+
 ## ❤️ Plantillas de la comunidad
 
 Descubre quién está usando o se inspiró por esta colección de plantillas para crear su propio portafolio.
@@ -104,6 +110,8 @@ Diseñado con ❤️ por [Ana Rangel][anarangel] y desarrollado con 💙 por [Fe
 [pagespeed]: https://pagespeed.web.dev/analysis/https-unicorn-sparkle-web-app/cnpanzebex?form_factor=desktop
 [unicorn-sparkle-folder]: ./unicorn-sparkle
 [unicorn-sparkle-screenshot]: ./unicorn-sparkle/assets/unicorn-sparkle.png
+[mistical-unicorn-folder]: ./mistical-unicorn
+[mistical-unicorn-screenshot]: ./mistical-unicorn/assets/mistical-unicorn.png
 [figma]: https://www.figma.com/design/RPSa9nHARMmnTemhrGuTCZ/Portafolio-dev?node-id=44-1034&t=dIZVva7mcSSduV6j-1
 [figma-badge]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
 [demo]: https://unicorn-sparkle.web.app
