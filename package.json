@@ -51,7 +51,7 @@
     "@typescript-eslint/parser": "7.0.0",
     "astro-eslint-parser": "1.0.3",
     "eslint": "8.57.0",
-    "eslint-config-love": "47.0.0",
+    "eslint-config-love": "84.1.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-astro": "1.2.4",
