@@ -1,0 +1,40 @@
+.status-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: #0D2858;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+    h2 {
+        font-weight: 600;
+    }
+  }
+  .status-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 1s;
+  }
+  
+  .status-indicator.available {
+    background-color: #28a745;
+    animation: breathing 2s infinite;
+  }
+  
+  .status-indicator.unavailable {
+    background-color: #dc3545; 
+    animation: breathing 2s infinite;
+  }
+  
+  @keyframes breathing {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }

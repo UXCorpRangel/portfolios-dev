@@ -1,0 +1,270 @@
+.about-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    
+    .info {
+        margin: 1rem 2rem;
+
+        p {
+            text-align: center;
+            font-size: 1.35rem;
+            font-weight: 300;
+            line-height: 2rem;
+        }
+     }
+
+    .tags-container {
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        padding: 1rem;
+    }
+}
+
+@media (Width <= 1438px) {
+    .about-card .info {
+        margin: 0.5rem 2rem;
+    }
+}
+
+@media (Width <= 1342px) {
+    .about-card .info {
+        margin: 0 1.5rem;
+    }
+}
+
+@media (Width <= 1294px) {
+    .about-card .info {
+        margin: 0 1.45rem;
+    }
+}
+
+@media (Width <= 1288px) {
+    .about-card .info {
+        margin: 0 1.35rem;
+    }
+}
+
+@media (Width <= 1288px) {
+    .about-card .info {
+        margin: 0 1.25rem;
+    }
+}
+
+@media (Width <= 1285px) {
+    .about-card {
+        
+        .info {
+            margin: 0 1.15rem;
+        }
+
+        .tags-container {
+            padding: 0 0.5rem;
+        }
+    }
+}
+
+@media (Width <= 1237px) {
+    .about-card {
+        
+        .info {
+            margin: 0 1.15rem;
+        }
+
+        .tags-container {
+            padding: 0;
+        }
+    }
+}
+
+@media (Width <= 1237px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 1063px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 1051px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 1012px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1.25rem;
+            }
+        }
+        .tags-container {
+            padding: 1rem;
+        }
+    }
+}
+
+@media (Width <= 872px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1.15rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 864px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 834px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 788px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1rem;
+            }
+        }
+        .tags-container {
+            padding: 0;
+        }
+    }
+}
+
+@media (Width <= 784px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1.25rem;
+            }
+        }
+        .tags-container {
+            padding: 1rem;
+        }
+    }
+}
+
+@media (Width <= 461px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1.15rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 457px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 442px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (Width <= 442px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1rem;
+            }
+        }
+        .tags-container {
+            padding: 0.5rem;
+        }
+    }
+}
+
+@media (Width <= 442px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 1rem;
+            }
+        }
+        .tags-container {
+            padding: 0.25rem;
+        }
+    }
+}
+
+@media (Width <= 394px) {
+    .about-card {
+        
+        .info {
+            p {
+                font-size: 0.8rem;
+            }
+        }
+        .tags-container {
+            padding: 0.25rem;
+        }
+    }
+}

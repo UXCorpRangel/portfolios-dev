@@ -1,0 +1,134 @@
+.work-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: var(--bg-card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.work-info {
+  margin: 1rem;
+  text-align: left;
+}
+
+.project-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 0;
+}
+
+.company-name {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 0.5rem;
+}
+
+.btn-link {
+  margin-right: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  transition: all .3s ease;
+  background-color: var(--bg-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-link:hover {
+  border: 1px solid var(--border-color);
+  transition: all .3s ease;
+  box-shadow: 4px 4px 0 0 var(--border-color);
+}
+
+.btn-link:active {
+  transition: all .3s ease;
+  box-shadow: 2px 2px 0 0 var(--border-color);
+}
+
+@media (Width <= 1297px) {
+  .work-card .work-info .project-name {
+    font-size: 1.15rem;
+  }
+}
+
+@media (Width <= 1225px) {
+  .work-card .work-info .project-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (Width <= 1189px) {
+  .work-card .work-info .project-name {
+    font-size: 1rem;
+  }
+}
+
+@media (Width <= 1120px) {
+  .work-card .work-info .project-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (Width <= 1048px) {
+  .work-card .work-info .project-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (Width <= 1012px) {
+  .work-card .work-info .project-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (Width <= 880px) {
+  .work-card .work-info .project-name {
+    font-size: 1.15rem;
+  }
+}
+
+@media (Width <= 832px) {
+  .work-card .work-info .project-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (Width <= 808px) {
+  .work-card .work-info .project-name {
+    font-size: 1rem;
+  }
+}
+
+@media (Width <= 784px) {
+  .work-card .work-info .project-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (Width <= 464px) {
+  .work-card .work-info .project-name {
+    font-size: 1.15rem;
+  }
+}
+
+@media (Width <= 440px) {
+  .work-card .work-info .project-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (Width <= 428px) {
+  .work-card .work-info .project-name {
+    font-size: 1rem;
+  }
+}
+
+@media (Width <= 428px) {
+  .work-card .work-info .project-name {
+    font-size: 0.9rem;
+  }
+}
