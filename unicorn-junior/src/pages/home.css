@@ -1,0 +1,25 @@
+.container-grid{
+    max-width: 1500px;
+    margin: auto;
+}
+
+.react-grid-layout {
+    transform: translate(0, 0);
+}
+
+.react-grid-item{
+    height: 77px;
+    cursor: grab;
+    text-align: center;
+    border-radius: 1rem;
+    transition: all 0.1s ease;
+    font-family: 'Onest Variable', sans-serif;
+    color: white;
+
+    border: 1px dashed var(--border-color);
+}
+
+.react-draggable {
+    border: 1px solid var(--border-color);
+    z-index: 1;
+}

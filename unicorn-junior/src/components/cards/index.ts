@@ -1,0 +1,6 @@
+export { default as WideCard } from './wideCard/WideCard'
+export { default as AboutCard } from './aboutMeCard/AboutCard'
+export { default as StudiesCard } from './studiesCard/StudiesCard'
+export { default as StatusCard } from './statusCard/StatusCard'
+export { default as WorkCard } from './workCard/WorkCard'
+export { default as FooterCard } from './footerCard/FooterCard'
