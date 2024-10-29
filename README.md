@@ -82,7 +82,7 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 ### [🌈 Rainbow Unicorn][rainbow-unicorn-folder]
 
-[![Rainbow Unicorn](./rainbow-unicorn/assets/rainbow-unicorn.gif)][rainbow-unicorn-folder]
+[![Rainbow Unicorn](https://github.com/user-attachments/assets/c191ae21-7a53-45bf-bc18-bc4e01262a3d)][rainbow-unicorn-folder]
 
 Plantilla para desarrolladores que quieren tener un portafolio con un diseño tipo Bento minimalista y con una funcionalidad espectacular de reorganizar secciones.
 
