@@ -13,6 +13,7 @@ Una colección única de plantillas de portafolios para desarrolladores. Obtén 
   - [🦄 Unicorn Sparkle](#-unicorn-sparkle)
   - [🔮 Mistical Unicorn](#-mistical-unicorn)
 - [❤️ Plantillas de la comunidad](#%EF%B8%8F-plantillas-de-la-comunidad)
+  - [🌈 Rainbow Unicorn](#-rainbow-unicorn)
 - [🤝 Contribuir](#-contribuir)
 - [📈 Actividad](#-actividad)
 - [📄 Licencia](#-licencia)
@@ -79,6 +80,39 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 ## ❤️ Plantillas de la comunidad
 
+### [🌈 Rainbow Unicorn][rainbow-unicorn-folder]
+
+[![Rainbow Unicorn](./rainbow-unicorn/assets/rainbow-unicorn.gif)][rainbow-unicorn-folder]
+
+Plantilla para desarrolladores que quieren tener un portafolio con un diseño tipo Bento minimalista y con una funcionalidad espectacular de reorganizar secciones.
+
+#### 📦 Stack
+
+- ⚡ [Vite](https://vitejs.dev/) - Herramienta de creación rápida que impulsa la próxima generación de aplicaciones web.
+- ⚛️ [React](https://react.dev/) - Librería de JavaScript para construir interfaces de usuario.
+- 💅 [CSS](https://lenguajecss.com/css/) - Lenguaje de estilo para páginas web.
+- 🏷️ [Typescript](https://www.typescriptlang.org/) - JavaScript con sintaxis para tipos.
+
+#### ¿Cómo usar?
+
+Para utilizar la plantilla [Rainbow Unicorn][rainbow-unicorn-folder] puedes copiar y ejecutar el siguiente comando en tu terminal:
+
+Con NPM:
+
+```bash
+npx giget@latest gh:UXCorpRangel/portfolios-dev/rainbow-unicorn myPortfolio
+```
+
+Con PNPM:
+
+```bash
+pnpx giget@latest gh:UXCorpRangel/portfolios-dev/rainbow-unicorn myPortfolio
+```
+
+Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 🎉.
+
+### Otras plantillas
+
 Descubre quién está usando o se inspiró por esta colección de plantillas para crear su propio portafolio.
 
 #### <img src="./assets/icons/html5.svg" height="14" alt="HTML 5" style="transform: translateY(1.2px)"> Vanilla
@@ -120,3 +154,4 @@ Diseñado con ❤️ por [Ana Rangel][anarangel] y desarrollado con 💙 por [Fe
 [accessibility-badge]: ./unicorn-sparkle/performance/lighthouse_accessibility.svg
 [best-practices-badge]: ./unicorn-sparkle/performance/lighthouse_best-practices.svg
 [seo-badge]: ./unicorn-sparkle/performance/lighthouse_seo.svg
+[rainbow-unicorn-folder]: ./rainbow-unicorn

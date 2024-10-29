@@ -19,10 +19,13 @@
   "license": "MIT",
   "author": "UXCorpRangel - Felix Icaza <fx.joliett17@gmail.com>",
   "scripts": {
+    "build:ru": "pnpm -C rainbow-unicorn build",
     "build:us": "pnpm -C unicorn-sparkle build",
+    "dev:ru": "pnpm -C rainbow-unicorn dev",
     "dev:us": "pnpm -C unicorn-sparkle dev",
     "performance:us": "lighthouse-badges -u https://unicorn-sparkle.web.app/ -o ./unicorn-sparkle/performance/ -b for-the-badge",
     "prepare": "husky",
+    "preview:ru": "pnpm -C rainbow-unicorn preview",
     "preview:us": "pnpm -C unicorn-sparkle preview"
   },
   "lint-staged": {
