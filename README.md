@@ -93,7 +93,7 @@ Plantilla para desarrolladores que quieren tener un portafolio con un diseño ti
 - 💅 [CSS](https://lenguajecss.com/css/) - Lenguaje de estilo para páginas web.
 - 🏷️ [Typescript](https://www.typescriptlang.org/) - JavaScript con sintaxis para tipos.
 
-#### ¿Cómo usar?
+#### 🤔 ¿Cómo usar?
 
 Para utilizar la plantilla [Rainbow Unicorn][rainbow-unicorn-folder] puedes copiar y ejecutar el siguiente comando en tu terminal:
 
@@ -111,7 +111,7 @@ pnpx giget@latest gh:UXCorpRangel/portfolios-dev/rainbow-unicorn myPortfolio
 
 Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 🎉.
 
-### Otras plantillas
+### 👀 Otras plantillas
 
 Descubre quién está usando o se inspiró por esta colección de plantillas para crear su propio portafolio.
 
