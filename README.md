@@ -86,6 +86,11 @@ Luego entra en la carpeta de tu portafolio, instala las dependencias y ¡listo! 
 
 Plantilla para desarrolladores que quieren tener un portafolio con un diseño tipo Bento minimalista y con una funcionalidad espectacular de reorganizar secciones.
 
+#### 🔗 Enlaces
+
+[![Repositorio][github-badge]][rainbow-unicorn-repo]
+[![Sitio web de Rainbow Unicorn][demo-badge]][rainbow-unicorn-demo]
+
 #### 📦 Stack
 
 - ⚡ [Vite](https://vitejs.dev/) - Herramienta de creación rápida que impulsa la próxima generación de aplicaciones web.
@@ -150,8 +155,11 @@ Diseñado con ❤️ por [Ana Rangel][anarangel] y desarrollado con 💙 por [Fe
 [figma-badge]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
 [demo]: https://unicorn-sparkle.web.app
 [demo-badge]: https://img.shields.io/website?url=https%3A%2F%2Funicorn-sparkle.web.app&style=for-the-badge
+[github-badge]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
 [performance-badge]: ./unicorn-sparkle/performance/lighthouse_performance.svg
 [accessibility-badge]: ./unicorn-sparkle/performance/lighthouse_accessibility.svg
 [best-practices-badge]: ./unicorn-sparkle/performance/lighthouse_best-practices.svg
 [seo-badge]: ./unicorn-sparkle/performance/lighthouse_seo.svg
 [rainbow-unicorn-folder]: ./rainbow-unicorn
+[rainbow-unicorn-demo]: https://facundodandrea.vercel.app/
+[rainbow-unicorn-repo]: https://github.com/Facundodandrea/bento-portfolio
