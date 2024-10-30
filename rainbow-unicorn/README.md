@@ -1,4 +1,4 @@
-# 🌈 Rainbow Unicor
+# 🌈 Rainbow Unicorn
 
 ![Rainbow Unicor](./assets/rainbow-unicorm.png)
 
