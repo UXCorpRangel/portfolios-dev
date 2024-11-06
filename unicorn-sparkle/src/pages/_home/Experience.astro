@@ -231,14 +231,20 @@ const normalizeTitle = title
   ) as NodeListOf<HTMLDivElement>
 
   tabButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      tabButtons.forEach((tab) => {
-        tab.classList.toggle('active')
+    button.addEventListener('click', (event) => {
+      const target = event.target as HTMLButtonElement
+      const index = Array.from(tabButtons).indexOf(target)
+
+      tabButtons.forEach((button) => {
+        button.classList.remove('active')
       })
 
       tabContents.forEach((content) => {
-        content.classList.toggle('active')
+        content.classList.remove('active')
       })
+
+      tabButtons[index].classList.add('active')
+      tabContents[index].classList.add('active')
     })
   })
 </script>
