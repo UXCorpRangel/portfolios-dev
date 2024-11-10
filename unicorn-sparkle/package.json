@@ -56,7 +56,7 @@
     "astro-seo-schema": "4.0.2",
     "astro-sitemap": "1.0.0",
     "astro-tunnel": "0.1.6",
-    "i18next": "23.16.4",
+    "i18next": "23.16.5",
     "sanitize.css": "13.0.0",
     "schema-dts": "1.1.2",
     "typescript": "5.6.3"
