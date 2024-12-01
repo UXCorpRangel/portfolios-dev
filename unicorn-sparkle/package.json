@@ -50,7 +50,7 @@
     "@fontsource-variable/inter": "5.1.0",
     "@playform/compress": "0.1.6",
     "astro": "4.16.14",
-    "astro-compressor": "0.4.1",
+    "astro-compressor": "1.0.0",
     "astro-icon": "1.1.4",
     "astro-imagetools": "0.9.0",
     "astro-seo-schema": "4.0.3",
