@@ -98,7 +98,7 @@ importers:
         specifier: ^9.16.0
         version: 9.16.0
       '@types/react':
-        specifier: ^19.0.1
+        specifier: ^19.0.0
         version: 19.0.1
       '@types/react-dom':
         specifier: ^19.0.1
@@ -146,8 +146,8 @@ importers:
         specifier: 0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@astrolicious/i18n':
-        specifier: 0.5.1
-        version: 0.5.1(@types/node@22.7.7)(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
+        specifier: 0.6.0
+        version: 0.6.0(@types/node@22.7.7)(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
       '@fontsource-variable/inter':
         specifier: 5.1.0
         version: 5.1.0
@@ -293,10 +293,10 @@ packages:
   '@astrojs/yaml2ts@0.2.1':
     resolution: {integrity: sha512-CBaNwDQJz20E5WxzQh4thLVfhB3JEEGz72wRA+oJp6fQR37QLAqXZJU0mHC+yqMOQ6oj0GfRPJrz6hjf+zm6zA==}
 
-  '@astrolicious/i18n@0.5.1':
-    resolution: {integrity: sha512-tMdOIOc2B0VsnvhEkOXO5LNALpa3Wxpq/SXsIrQpO4n40MvyH7z2J4HT7QL6se3weFNSLoy0m3dDpq41jOihfQ==}
+  '@astrolicious/i18n@0.6.0':
+    resolution: {integrity: sha512-pOojMoNopDzLD5ccB94fyVAzMjMD7W/d3kdRCTO0BX0RcWTzXO7I2Sw+HuQec0vapTKeRlwRGtqxJDom1CqU0w==}
     peerDependencies:
-      astro: ^4.12.0
+      astro: ^4.14.0 || ^5.0.0
       i18next: ^23.0.0
 
   '@astropub/codecs@0.4.4':
@@ -1350,9 +1350,6 @@ packages:
 
   '@types/node@22.7.7':
     resolution: {integrity: sha512-SRxCrrg9CL/y54aiMCG3edPKdprgMVGDXjA3gB8UmmBW5TcXzRUYAh8EWzTnSJFAd1rgImPELza+A3bJ+qxz8Q==}
-
-  '@types/prop-types@15.7.13':
-    resolution: {integrity: sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==}
 
   '@types/react-dom@19.0.1':
     resolution: {integrity: sha512-hljHij7MpWPKF6u5vojuyfV0YA4YURsQG7KT6SzV0Zs2BXAtgdTxG6A229Ub/xiWV4w/7JL8fi6aAyjshH4meA==}
@@ -5357,7 +5354,7 @@ snapshots:
     dependencies:
       yaml: 2.6.0
 
-  '@astrolicious/i18n@0.5.1(@types/node@22.7.7)(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
+  '@astrolicious/i18n@0.6.0(@types/node@22.7.7)(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
     dependencies:
       '@inox-tools/aik-route-config': 0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)))(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
       astro: 4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)
@@ -6460,8 +6457,6 @@ snapshots:
   '@types/node@22.7.7':
     dependencies:
       undici-types: 6.19.8
-
-  '@types/prop-types@15.7.13': {}
 
   '@types/react-dom@19.0.1':
     dependencies:
@@ -10065,7 +10060,7 @@ snapshots:
 
   react-dom@19.0.0(react@19.0.0):
     dependencies:
-      react: 18.3.1
+      react: 19.0.0
       scheduler: 0.25.0
 
   react-draggable@4.4.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
