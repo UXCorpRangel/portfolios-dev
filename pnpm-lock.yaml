@@ -98,7 +98,7 @@ importers:
         specifier: ^9.16.0
         version: 9.16.0
       '@types/react':
-        specifier: ^19.0.1
+        specifier: ^19.0.0
         version: 19.0.1
       '@types/react-dom':
         specifier: ^19.0.1
@@ -167,8 +167,8 @@ importers:
         specifier: 0.9.0
         version: 0.9.0(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))
       astro-seo-schema:
-        specifier: 4.0.3
-        version: 4.0.3(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2))
+        specifier: 5.0.0
+        version: 5.0.0(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2))
       astro-sitemap:
         specifier: 1.0.0
         version: 1.0.0
@@ -1351,9 +1351,6 @@ packages:
   '@types/node@22.7.7':
     resolution: {integrity: sha512-SRxCrrg9CL/y54aiMCG3edPKdprgMVGDXjA3gB8UmmBW5TcXzRUYAh8EWzTnSJFAd1rgImPELza+A3bJ+qxz8Q==}
 
-  '@types/prop-types@15.7.13':
-    resolution: {integrity: sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==}
-
   '@types/react-dom@19.0.1':
     resolution: {integrity: sha512-hljHij7MpWPKF6u5vojuyfV0YA4YURsQG7KT6SzV0Zs2BXAtgdTxG6A229Ub/xiWV4w/7JL8fi6aAyjshH4meA==}
 
@@ -1755,10 +1752,10 @@ packages:
     peerDependencies:
       astro: '>=3'
 
-  astro-seo-schema@4.0.3:
-    resolution: {integrity: sha512-K7fhkAhAkgNfWpiQRCa7K1/VBI+OatmzQjxTlPSKIoGSrXLOziPRImdXkWgFJCGhOKRVfAKdroqt1a1CdEFBPQ==}
+  astro-seo-schema@5.0.0:
+    resolution: {integrity: sha512-rbP9BUxvqH4tdgG5VEYDcoAxUhVKv93TdHRQ5zbYUxee1TKAWsNcAG3nqavX83QTTGqU5anvikMcJZXWhGN9wg==}
     peerDependencies:
-      astro: ^4.0.0
+      astro: ^5.0.0
       schema-dts: ^1.1.0
 
   astro-sitemap@1.0.0:
@@ -6461,8 +6458,6 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
-  '@types/prop-types@15.7.13': {}
-
   '@types/react-dom@19.0.1':
     dependencies:
       '@types/react': 19.0.1
@@ -7018,7 +7013,7 @@ snapshots:
       astro: 4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)
       fast-glob: 3.3.2
 
-  astro-seo-schema@4.0.3(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2)):
+  astro-seo-schema@5.0.0(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2)):
     dependencies:
       astro: 4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)
       schema-dts: 1.1.2(typescript@5.7.2)
@@ -10065,7 +10060,7 @@ snapshots:
 
   react-dom@19.0.0(react@19.0.0):
     dependencies:
-      react: 18.3.1
+      react: 19.0.0
       scheduler: 0.25.0
 
   react-draggable@4.4.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
