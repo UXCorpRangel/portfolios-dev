@@ -128,8 +128,8 @@ importers:
         specifier: ^15.13.0
         version: 15.13.0
       prettier:
-        specifier: 3.4.1
-        version: 3.4.1
+        specifier: 3.4.2
+        version: 3.4.2
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -147,7 +147,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@astrolicious/i18n':
         specifier: 0.6.0
-        version: 0.6.0(@types/node@22.7.7)(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
+        version: 0.6.0(@types/node@22.7.7)(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
       '@fontsource-variable/inter':
         specifier: 5.1.0
         version: 5.1.0
@@ -168,7 +168,7 @@ importers:
         version: 0.9.0(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))
       astro-seo-schema:
         specifier: 5.0.0
-        version: 5.0.0(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2))
+        version: 5.0.0(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))(schema-dts@1.1.2(typescript@5.7.2))
       astro-sitemap:
         specifier: 1.0.0
         version: 1.0.0
@@ -4092,11 +4092,6 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.4.1:
-    resolution: {integrity: sha512-G+YdqtITVZmOJje6QkXQWzl3fSfMxFwm1tjTyo9exhkmWSqC4Yhd1+lug++IlR2mvRVAxEDDWYkQdeSztajqgg==}
-    engines: {node: '>=14'}
-    hasBin: true
-
   prettier@3.4.2:
     resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
@@ -5322,12 +5317,12 @@ snapshots:
     dependencies:
       yaml: 2.6.0
 
-  '@astrolicious/i18n@0.6.0(@types/node@22.7.7)(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
+  '@astrolicious/i18n@0.6.0(@types/node@22.7.7)(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))(i18next@24.0.5(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
     dependencies:
-      '@inox-tools/aik-route-config': 0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)))(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
-      astro: 5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)
-      astro-integration-kit: 0.16.1(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))
-      astro-pages: 0.3.0(astro@4.16.16(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))
+      '@inox-tools/aik-route-config': 0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0)))(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))(lightningcss@1.27.0)(terser@5.36.0)
+      astro: 5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0)
+      astro-integration-kit: 0.16.1(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))
+      astro-pages: 0.3.0(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))
       i18next: 24.0.5(typescript@5.7.2)
       sitemap: 7.1.2
       typescript: 5.7.2
@@ -6964,7 +6959,7 @@ snapshots:
       astro: 5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0)
       fast-glob: 3.3.2
 
-  astro-seo-schema@5.0.0(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2)):
+  astro-seo-schema@5.0.0(astro@5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0))(schema-dts@1.1.2(typescript@5.7.2)):
     dependencies:
       astro: 5.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.0)
       schema-dts: 1.1.2(typescript@5.7.2)
@@ -7031,8 +7026,8 @@ snapshots:
       ultrahtml: 1.5.3
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vite: 6.0.1(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0)
-      vitefu: 1.0.4(vite@6.0.1(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0))
+      vite: 6.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0)
+      vitefu: 1.0.4(vite@6.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0))
       which-pm: 3.0.0
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -9911,8 +9906,6 @@ snapshots:
   prettier@2.8.7:
     optional: true
 
-  prettier@3.4.1: {}
-
   prettier@3.4.2: {}
 
   prismjs@1.29.0: {}
@@ -10908,9 +10901,9 @@ snapshots:
       terser: 5.36.0
       yaml: 2.6.0
 
-  vitefu@1.0.4(vite@6.0.1(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0)):
+  vitefu@1.0.4(vite@6.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0)):
     optionalDependencies:
-      vite: 6.0.1(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0)
+      vite: 6.0.3(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)(yaml@2.6.0)
 
   volar-service-css@0.0.61(@volar/language-service@2.4.6):
     dependencies:
