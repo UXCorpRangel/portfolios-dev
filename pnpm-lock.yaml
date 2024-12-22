@@ -147,7 +147,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@astrolicious/i18n':
         specifier: 0.6.0
-        version: 0.6.0(@types/node@22.7.7)(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.1.2(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
+        version: 0.6.0(@types/node@22.7.7)(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.2.0(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
       '@fontsource-variable/inter':
         specifier: 5.1.0
         version: 5.1.0
@@ -176,8 +176,8 @@ importers:
         specifier: 0.1.6
         version: 0.1.6(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
       i18next:
-        specifier: 24.1.2
-        version: 24.1.2(typescript@5.7.2)
+        specifier: 24.2.0
+        version: 24.2.0(typescript@5.7.2)
       sanitize.css:
         specifier: 13.0.0
         version: 13.0.0
@@ -2942,8 +2942,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  i18next@24.1.2:
-    resolution: {integrity: sha512-th/075GW0Ub1gYDMHLiZXMGSfGv1aP1VqjT3fma/12hNHCNlH8oJMftvlDzycT/R+KoULWk+xLU8H1JRwV85qw==}
+  i18next@24.2.0:
+    resolution: {integrity: sha512-ArJJTS1lV6lgKH7yEf4EpgNZ7+THl7bsGxxougPYiXRTJ/Fe1j08/TBpV9QsXCIYVfdE/HWG/xLezJ5DOlfBOA==}
     peerDependencies:
       typescript: ^5
     peerDependenciesMeta:
@@ -5310,13 +5310,13 @@ snapshots:
     dependencies:
       yaml: 2.6.0
 
-  '@astrolicious/i18n@0.6.0(@types/node@22.7.7)(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.1.2(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
+  '@astrolicious/i18n@0.6.0(@types/node@22.7.7)(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.2.0(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
     dependencies:
       '@inox-tools/aik-route-config': 0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(lightningcss@1.27.0)(terser@5.36.0)
       astro: 5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       astro-integration-kit: 0.16.1(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
       astro-pages: 0.3.0(astro@5.0.9(@types/node@22.7.7)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
-      i18next: 24.1.2(typescript@5.7.2)
+      i18next: 24.2.0(typescript@5.7.2)
       sitemap: 7.1.2
       typescript: 5.7.2
       ufo: 1.5.4
@@ -8562,7 +8562,7 @@ snapshots:
 
   husky@9.1.7: {}
 
-  i18next@24.1.2(typescript@5.7.2):
+  i18next@24.2.0(typescript@5.7.2):
     dependencies:
       '@babel/runtime': 7.25.7
     optionalDependencies:
