@@ -123,6 +123,7 @@ Descubre quién está usando o se inspiró por esta colección de plantillas par
 #### <img src="./assets/icons/html5.svg" height="14" alt="HTML 5" style="transform: translateY(1.2px)"> Vanilla
 
 - [Portfolio_with_UX_UI_Design](https://github.com/Edu980-8/Portfolio_with_UX_UI_Design) - [Ver demo](https://edu980-8.github.io/Portfolio_with_UX_UI_Design/)
+- [MiPortafolio](https://github.com/developerleonardo/portfolio-leonardo) - [Ver demo](https://portfolio-leonardo-cr5f.vercel.app/)
 
 ¿Usaste o te inspiraste de alguna de estas plantillas? ¡[Haz un pull request](https://github.com/UXCorpRangel/portfolios-dev/pulls) y lo añadiremos a esta lista para que todos puedan verlo! Tu aporte es muy apreciado.
 
