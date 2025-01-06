@@ -147,7 +147,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@astrolicious/i18n':
         specifier: 0.6.1
-        version: 0.6.1(@types/node@22.7.7)(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.2.0(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
+        version: 0.6.1(@types/node@22.7.7)(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.2.0(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)
       '@fontsource-variable/inter':
         specifier: 5.1.1
         version: 5.1.1
@@ -155,8 +155,8 @@ importers:
         specifier: 0.1.6
         version: 0.1.6(@types/node@22.7.7)(jiti@2.4.2)(rollup@4.24.0)(typescript@5.7.2)(yaml@2.6.1)
       astro:
-        specifier: 5.1.1
-        version: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: 5.1.2
+        version: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       astro-compressor:
         specifier: 1.0.0
         version: 1.0.0
@@ -165,16 +165,16 @@ importers:
         version: 1.1.5
       astro-imagetools:
         specifier: 0.9.0
-        version: 0.9.0(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
+        version: 0.9.0(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
       astro-seo-schema:
         specifier: 5.0.0
-        version: 5.0.0(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2))
+        version: 5.0.0(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2))
       astro-sitemap:
         specifier: 1.0.0
         version: 1.0.0
       astro-tunnel:
         specifier: 0.1.6
-        version: 0.1.6(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
+        version: 0.1.6(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
       i18next:
         specifier: 24.2.0
         version: 24.2.0(typescript@5.7.2)
@@ -1847,8 +1847,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0
 
-  astro@5.1.1:
-    resolution: {integrity: sha512-prpWC2PRs4P3FKQg6gZaU+VNMqbZi5pDvORGB2nrjfRjkrvF6/l4BqhvkJ6YQ0Ohm5rIMVz8ljgaRI77mLHbwg==}
+  astro@5.1.2:
+    resolution: {integrity: sha512-+U5lXPEJZ6cQx0botGbPhzN6XGWRgDtXgy/RUkpTmUj18LW6pbzYo0O0k3hFWOazlI039bZ+4P2e/oSNlKzm0Q==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2013,10 +2013,6 @@ packages:
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
-
-  chalk@5.3.0:
-    resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   chalk@5.4.1:
     resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
@@ -5737,12 +5733,12 @@ snapshots:
     dependencies:
       yaml: 2.6.1
 
-  '@astrolicious/i18n@0.6.1(@types/node@22.7.7)(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.2.0(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
+  '@astrolicious/i18n@0.6.1(@types/node@22.7.7)(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(i18next@24.2.0(typescript@5.7.2))(lightningcss@1.27.0)(terser@5.36.0)':
     dependencies:
-      '@inox-tools/aik-route-config': 0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(lightningcss@1.27.0)(terser@5.36.0)
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
-      astro-integration-kit: 0.16.1(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
-      astro-pages: 0.3.0(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
+      '@inox-tools/aik-route-config': 0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(lightningcss@1.27.0)(terser@5.36.0)
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro-integration-kit: 0.16.1(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
+      astro-pages: 0.3.0(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
       i18next: 24.2.0(typescript@5.7.2)
       sitemap: 7.1.2
       typescript: 5.7.2
@@ -6276,11 +6272,11 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
-  '@inox-tools/aik-route-config@0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(lightningcss@1.27.0)(terser@5.36.0)':
+  '@inox-tools/aik-route-config@0.7.4(@types/node@22.7.7)(astro-integration-kit@0.16.1(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(lightningcss@1.27.0)(terser@5.36.0)':
     dependencies:
       '@inox-tools/utils': 0.2.0
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
-      astro-integration-kit: 0.16.1(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro-integration-kit: 0.16.1(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))
       debug: 4.4.0
       recast: 0.23.9
       vite: 5.4.11(@types/node@22.7.7)(lightningcss@1.27.0)(terser@5.36.0)
@@ -6658,7 +6654,7 @@ snapshots:
       '@playform/pipe': 0.1.1
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       commander: 12.1.0
       csso: 5.0.5
       deepmerge-ts: 7.1.3
@@ -7460,10 +7456,10 @@ snapshots:
       - debug
       - supports-color
 
-  astro-imagetools@0.9.0(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
+  astro-imagetools@0.9.0(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
     dependencies:
       '@astropub/codecs': 0.4.4
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       file-type: 17.1.1
       find-cache-dir: 3.3.2
       find-up: 6.3.0
@@ -7474,20 +7470,20 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  astro-integration-kit@0.16.1(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
+  astro-integration-kit@0.16.1(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
     dependencies:
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       pathe: 1.1.2
       recast: 0.23.9
 
-  astro-pages@0.3.0(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
+  astro-pages@0.3.0(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
     dependencies:
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       fast-glob: 3.3.2
 
-  astro-seo-schema@5.0.0(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2)):
+  astro-seo-schema@5.0.0(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2)):
     dependencies:
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       schema-dts: 1.1.2(typescript@5.7.2)
 
   astro-sitemap@1.0.0:
@@ -7496,12 +7492,12 @@ snapshots:
       sitemap: 7.1.2
       zod: 3.23.8
 
-  astro-tunnel@0.1.6(astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
+  astro-tunnel@0.1.6(astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)):
     dependencies:
-      astro: 5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       untun: 0.1.3
 
-  astro@5.1.1(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1):
+  astro@5.1.2(@types/node@22.7.7)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -7682,7 +7678,7 @@ snapshots:
     dependencies:
       ansi-align: 3.0.1
       camelcase: 8.0.0
-      chalk: 5.3.0
+      chalk: 5.4.1
       cli-boxes: 3.0.0
       string-width: 7.2.0
       type-fest: 4.26.1
@@ -7774,8 +7770,6 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-
-  chalk@5.3.0: {}
 
   chalk@5.4.1: {}
 
