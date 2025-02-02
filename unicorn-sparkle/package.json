@@ -49,7 +49,7 @@
     "@astrolicious/i18n": "0.6.1",
     "@fontsource-variable/inter": "5.1.1",
     "@playform/compress": "0.1.7",
-    "astro": "5.1.9",
+    "astro": "5.2.3",
     "astro-compressor": "1.0.0",
     "astro-icon": "1.1.5",
     "astro-imagetools": "0.9.0",
