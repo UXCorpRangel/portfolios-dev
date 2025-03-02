@@ -70,8 +70,8 @@ importers:
   rainbow-unicorn:
     dependencies:
       '@fontsource-variable/onest':
-        specifier: ^5.1.1
-        version: 5.1.1
+        specifier: ^5.2.0
+        version: 5.2.0
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
@@ -782,8 +782,8 @@ packages:
   '@fontsource-variable/inter@5.1.1':
     resolution: {integrity: sha512-OpXFTmiH6tHkYijMvQTycFKBLK4X+SRV6tet1m4YOUH7SzIIlMqDja+ocDtiCA72UthBH/vF+3ZtlMr2rN/wIw==}
 
-  '@fontsource-variable/onest@5.1.1':
-    resolution: {integrity: sha512-Lb1hWJL7z7VZ9oDiHp5/O4tq/tzSQ0md1Luv+RPRnw3WalFoRBdjE9Xw9ibgteEeVlv8fYQ3UTR6ALDwdWxgzQ==}
+  '@fontsource-variable/onest@5.2.0':
+    resolution: {integrity: sha512-Q8MlsTbXByKV/lOISvDv06IaPlk1U5cX5325DvQCHhX/39XtNGxHv77sqAMi7eI8sddY9TF6gQ5hhFlImrO+8w==}
 
   '@formatjs/ecma402-abstract@2.2.0':
     resolution: {integrity: sha512-IpM+ev1E4QLtstniOE29W1rqH9eTdx5hQdNL8pzrflMj/gogfaoONZqL83LUeQScHAvyMbpqP5C9MzNf+fFwhQ==}
@@ -5055,6 +5055,9 @@ packages:
   third-party-web@0.26.2:
     resolution: {integrity: sha512-taJ0Us0lKoYBqcbccMuDElSUPOxmBfwlHe1OkHQ3KFf+RwovvBHdXhbFk9XJVQE2vHzxbTwvwg5GFsT9hbDokQ==}
 
+  third-party-web@0.26.5:
+    resolution: {integrity: sha512-tDuKQJUTfjvi9Fcrs1s6YAQAB9mzhTSbBZMfNgtWNmJlHuoFeXO6dzBFdGeCWRvYL50jQGK0jPsBZYxqZQJ2SA==}
+
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
 
@@ -6260,7 +6263,7 @@ snapshots:
 
   '@fontsource-variable/inter@5.1.1': {}
 
-  '@fontsource-variable/onest@5.1.1': {}
+  '@fontsource-variable/onest@5.2.0': {}
 
   '@formatjs/ecma402-abstract@2.2.0':
     dependencies:
@@ -6739,7 +6742,7 @@ snapshots:
 
   '@paulirish/trace_engine@0.0.39':
     dependencies:
-      third-party-web: 0.26.2
+      third-party-web: 0.26.5
 
   '@pkgr/core@0.1.1': {}
 
@@ -11863,6 +11866,8 @@ snapshots:
   text-table@0.2.0: {}
 
   third-party-web@0.26.2: {}
+
+  third-party-web@0.26.5: {}
 
   through@2.3.8: {}
 
