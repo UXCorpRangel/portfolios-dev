@@ -168,7 +168,7 @@ importers:
         version: 0.9.0(astro@5.2.3(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.32.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))
       astro-seo-schema:
         specifier: 5.0.0
-        version: 5.0.0(astro@5.2.3(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.32.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(schema-dts@1.1.2(typescript@5.7.3))
+        version: 5.0.0(astro@5.2.3(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.32.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(schema-dts@1.1.5)
       astro-sitemap:
         specifier: 1.0.0
         version: 1.0.0
@@ -182,8 +182,8 @@ importers:
         specifier: 13.0.0
         version: 13.0.0
       schema-dts:
-        specifier: 1.1.2
-        version: 1.1.2(typescript@5.7.3)
+        specifier: 1.1.5
+        version: 1.1.5
       typescript:
         specifier: 5.7.3
         version: 5.7.3
@@ -4765,10 +4765,8 @@ packages:
   scheduler@0.25.0:
     resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
 
-  schema-dts@1.1.2:
-    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
-    peerDependencies:
-      typescript: '>=4.1.0'
+  schema-dts@1.1.5:
+    resolution: {integrity: sha512-RJr9EaCmsLzBX2NDiO5Z3ux2BVosNZN5jo0gWgsyKvxKIUL5R3swNvoorulAeL9kLB0iTSX7V6aokhla2m7xbg==}
 
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -5054,6 +5052,9 @@ packages:
 
   third-party-web@0.26.2:
     resolution: {integrity: sha512-taJ0Us0lKoYBqcbccMuDElSUPOxmBfwlHe1OkHQ3KFf+RwovvBHdXhbFk9XJVQE2vHzxbTwvwg5GFsT9hbDokQ==}
+
+  third-party-web@0.26.5:
+    resolution: {integrity: sha512-tDuKQJUTfjvi9Fcrs1s6YAQAB9mzhTSbBZMfNgtWNmJlHuoFeXO6dzBFdGeCWRvYL50jQGK0jPsBZYxqZQJ2SA==}
 
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
@@ -6739,7 +6740,7 @@ snapshots:
 
   '@paulirish/trace_engine@0.0.39':
     dependencies:
-      third-party-web: 0.26.2
+      third-party-web: 0.26.5
 
   '@pkgr/core@0.1.1': {}
 
@@ -7582,10 +7583,10 @@ snapshots:
       astro: 5.2.3(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.32.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
       fast-glob: 3.3.3
 
-  astro-seo-schema@5.0.0(astro@5.2.3(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.32.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(schema-dts@1.1.2(typescript@5.7.3)):
+  astro-seo-schema@5.0.0(astro@5.2.3(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.32.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(schema-dts@1.1.5):
     dependencies:
       astro: 5.2.3(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.32.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
-      schema-dts: 1.1.2(typescript@5.7.3)
+      schema-dts: 1.1.5
 
   astro-sitemap@1.0.0:
     dependencies:
@@ -11463,9 +11464,7 @@ snapshots:
 
   scheduler@0.25.0: {}
 
-  schema-dts@1.1.2(typescript@5.7.3):
-    dependencies:
-      typescript: 5.7.3
+  schema-dts@1.1.5: {}
 
   section-matter@1.0.0:
     dependencies:
@@ -11863,6 +11862,8 @@ snapshots:
   text-table@0.2.0: {}
 
   third-party-web@0.26.2: {}
+
+  third-party-web@0.26.5: {}
 
   through@2.3.8: {}
 
